@@ -2,10 +2,10 @@
 <html id="ls-html" class="ui-v3" lang="en">
  <head data-app="user_sessions" data-country="US" data-lang="en" data-locale="en_US" data-brand="groupon" data-domain=".groupon.com" data-categoryid=""> 
   <title>Sign In</title> 
-  <link type="font/woff2" href="./font/OpenSansRegular-4511fb0ce0.woff2" /> 
-  <link type="font/woff2" href="./font/OpenSansSemiBold-ae379b1027.woff2" /> 
-  <link type="font/woff2" href="./font/OpenSansLight-2fd0ffaf77.woff2" /> 
-  <link type="font/woff2" href="./font/Groupon-6e46b5ff5a.woff2" /> 
+  <link type="font/woff2" href="./css/OpenSansRegular-4511fb0ce0.woff2" /> 
+  <link type="font/woff2" href="./css/OpenSansSemiBold-ae379b1027.woff2" /> 
+  <link type="font/woff2" href="./css/OpenSansLight-2fd0ffaf77.woff2" /> 
+  <link type="font/woff2" href="./css/Groupon-6e46b5ff5a.woff2" /> 
   <link href="./css/gig-grpn-v7-a9dc6af17c.css" rel="stylesheet" type="text/css" id="gig-css" /> 
   <link href="./css/desktop-grpn-v6.0-a9dc6af17c.css" rel="stylesheet" type="text/css" /> 
   <link href="./css/touch_responsive-151f478aba.css" rel="stylesheet" type="text/css" /> 
@@ -51,6 +51,7 @@
        <li class="login-tab active c-bdr-prim" id="login-tab-checkout" data-bhc="tab:login"> I have an account </li> 
        <li class="signup-tab c-bdr-gray-clr" id="signup-tab-checkout" data-bhc="tab:signup"> I'm a new customer </li> 
       </ul> 
+      <!-- content -->
       <div class="tab-contents-checkout"> 
        <div class="tab-content active login-content"> 
         <form id="login-form" novalidate="" action="/login?ref=https%3A%2F%2Fwww.groupon.com%2Fmylinkeddeals" method="post" data-bhw="LoginForm"> 
@@ -155,8 +156,26 @@
   </div> 
  </body>
  <script>
-  // (function() {
-  //   var label = document.querySelector('.tabs')
-  // })()
+  (function() {
+    var login = document.querySelector("#login-tab-checkout")
+    var signup = document.querySelector("#signup-tab-checkout")
+    var content = document.querySelectorAll('.tab-content')
+    login.addEventListener('click', function() {
+      login.classList.remove('c-bdr-gray-clr')
+      login.classList.add('active', 'c-bdr-prim')
+      signup.classList.remove('active', 'c-bdr-prim')
+      signup.classList.add('c-bdr-gray-clr')
+      content[0].classList.add('active')
+      content[1].classList.remove('active')
+    },false)
+    signup.addEventListener('click', function() {
+      signup.classList.remove('c-bdr-gray-clr')
+      signup.classList.add('active', 'c-bdr-prim')
+      login.classList.remove('active', 'c-bdr-prim')
+      login.classList.add('c-bdr-gray-clr')
+      content[1].classList.add('active')
+      content[0].classList.remove('active')
+    })
+  })()
  </script>
 </html>

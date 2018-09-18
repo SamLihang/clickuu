@@ -2,10 +2,10 @@
 <html id="ls-html" class="ui-v3" lang="en">
  <head data-app="clo" data-country="US" data-lang="en" data-locale="en_US" data-brand="groupon" data-categoryid=""> 
   <title>My Groupon+ Deals Summary</title> 
-  <link type="font/woff2" href="./font/OpenSansRegular-4511fb0ce0.woff2" /> 
-  <link type="font/woff2" href="./font/OpenSansSemiBold-ae379b1027.woff2" /> 
-  <link type="font/woff2" href="./font/OpenSansLight-2fd0ffaf77.woff2" /> 
-  <link type="font/woff2" href="./font/assets/Groupon-6e46b5ff5a.woff2" /> 
+  <link type="font/woff2" href="./css/OpenSansRegular-4511fb0ce0.woff2" /> 
+  <link type="font/woff2" href="./css/OpenSansSemiBold-ae379b1027.woff2" /> 
+  <link type="font/woff2" href="./css/OpenSansLight-2fd0ffaf77.woff2" /> 
+  <link type="font/woff2" href="./css/Groupon-6e46b5ff5a.woff2" /> 
   <link href="./css/gig-grpn-v7-a9dc6af17c.css" rel="stylesheet" type="text/css" id="gig-css" /> 
   <link href="./css/desktop-resp-grpn-v6.0-a9dc6af17c.css" rel="stylesheet" type="text/css" /> 
   <link href="./css/claim_list-186acdb200.css" rel="stylesheet" type="text/css" /> 
@@ -18,9 +18,10 @@
      <div class="ls-header-top"> 
       <div class="row ls-header-top-row ls-header-with-signin-flyout" id="ls-header-top-row"> 
        <a href="/" id="ls-groupon-logo" class="ls-groupon-logo" data-bhw="Logo" title="Groupon"> <span class="ax-hidden">Groupon</span> 
-        <svg role="presentation" width="125" height="21" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg role="presentation" width="125" height="21" xmlns="http://www.w3.org/2000/svg">
          <path d="M64.324 20.14c-4.428 0-7.099-2.72-7.099-7.604V.32h4.815v12.024c0 2.195.689 3.32 2.309 3.32 1.68 0 2.477-1.097 2.477-3.32V.32h4.785v12.216c0 4.776-2.913 7.605-7.287 7.605zm13.345-6.599v6.28H72.89V.32h6.481c2.064 0 3.63.138 4.947 1.07 1.732 1.207 2.639 3.043 2.639 5.485 0 2.525-1.154 4.61-3.104 5.786-1.237.745-2.775.88-4.809.88h-1.375zm.016-8.746h1.288c2.156 0 3.188.679 3.188 2.356 0 1.816-1.171 2.44-3.576 2.44h-.9V4.795zm35.803 4.165v10.861h-4.792V.32h4.318l7.198 10.836V.32H125V19.82h-4.212l-7.3-10.86zm-67.6 11.5c-2.892 0-5.372-1.058-7.299-3.113-1.848-1.97-2.783-4.41-2.783-7.325 0-2.722 1.046-5.219 2.974-7.137C40.71.972 43.133 0 45.917 0c2.617 0 5.098 1.027 6.997 2.917 1.986 1.97 3.032 4.495 3.032 7.19 0 2.83-.995 5.354-2.839 7.27a9.9 9.9 0 0 1-7.219 3.083zM45.8 4.795c2.75 0 5.032 2.275 5.032 5.122 0 3.182-2.281 5.428-5.087 5.428-2.694 0-5.143-2.356-5.143-5.428 0-2.847 2.284-5.122 5.198-5.122zM97.683 20.46c-2.894 0-5.372-1.058-7.3-3.113-1.848-1.97-2.787-4.41-2.787-7.325 0-2.722 1.046-5.219 2.978-7.137C92.506.972 94.927 0 97.71 0c2.62 0 5.094 1.027 6.999 2.917 1.981 1.97 3.028 4.495 3.028 7.19 0 2.83-.99 5.354-2.837 7.27a9.894 9.894 0 0 1-7.217 3.083zm-.098-15.665c2.754 0 5.036 2.275 5.036 5.122 0 3.182-2.282 5.428-5.086 5.428-2.697 0-5.144-2.356-5.144-5.428 0-2.847 2.283-5.122 5.194-5.122zM2.745 17.33C.925 15.365 0 12.93 0 10.024a9.95 9.95 0 0 1 2.937-7.118C4.838.998 7.233 0 9.977 0c4.135 0 7.749 2.575 9.3 6.786H13.89c-1.194-1.276-2.447-1.913-3.968-1.913-2.826 0-5.055 2.352-5.055 5.178 0 3.129 2.391 5.536 5.055 5.536 1.796 0 3.4-.94 4.35-2.657H8.758V9h11.011c.025.439.053.886.053 1.298 0 2.216-.544 4.098-1.66 5.761a9.965 9.965 0 0 1-8.237 4.401c-2.855 0-5.274-1.082-7.179-3.13zm23.122-3.788v6.28H21.1V.32h6.468c2.053 0 3.612.138 4.931 1.07 1.726 1.207 2.63 3.043 2.63 5.459 0 3.153-1.644 5.514-4.41 6.281l4.767 6.691h-5.892l-3.727-6.28zm.028-8.746h1.328c2.124 0 3.148.679 3.148 2.356 0 1.816-1.162 2.44-3.536 2.44h-.94V4.795z" fill="#FFF" fill-rule="evenodd" />
-        </svg> </a> 
+        </svg>  -->
+       </a> 
        <div id="ls-header-main" class="ls-clearfix alternative-search"> 
         <div id="ls-search-bar-wrapper" class="columns search-bar-wrapper ls-inbox-enabled"> 
          <form class="search-bar-v2" id="ls-search-form" data-bhw="SearchBar" role="search" action="" aria-label="What are you looking for?"> 
@@ -122,22 +123,6 @@
        </div> 
       </div> 
      </div> 
-     <nav id="ls-channel-nav" class="ls-channel-nav"> 
-      <div id="ls-primary-nav-row" class="row"> 
-       <ul id="primary-nav" class="primary-nav"> 
-        <li id="home-tab" class="primary-nav-tab" data-bhw="NavHome"> <a href="/"> Featured </a> </li> 
-        <li id="local-tab" class="primary-nav-tab" data-bhw="NavLocal"> <a href="/browse/chicago?context=local"> Local </a> </li> 
-        <li id="goods-tab" class="primary-nav-tab" data-bhw="NavGoods"> <a href="/goods"> Goods </a> </li> 
-        <li id="getaways-tab" class="primary-nav-tab" data-bhw="NavGetaways"> <a href="/getaways"> Getaways </a> </li> 
-        <li id="goods-deal-of-day-tab" class="primary-nav-tab" data-bhw="NavGoodsLightningFlash"> <a href="/occasion/deals-of-the-day"> Deals of the Day </a> </li> 
-        <li id="coupons-tab" class="primary-nav-tab" data-bhw="NavCoupons"> <a href="/coupons"> Coupons </a> </li> 
-        <li id="occasion-tab" class="primary-nav-tab Occasion" data-bhw="NavOccasions"> <a class="G_event E-GobalTopNavNH_GrouponOccasion" href="/occasion/sale" data-bhc="NavOccasions:sale"> Best of September Sale </a> </li> 
-       </ul> 
-      </div> 
-      <div id="ls-rail" class="ls-rail">
-       <span id="ls-rail-slide"></span>
-      </div> 
-     </nav>
     </header>
     <a id="ls-resp-menu-trigger" data-bhw="RespMenuTrigger" class="ls-resp-header-trigger icon-list" data-target="ls-resp-menu" aria-controls="ls-resp-menu-wrapper" role="button"> <span class="ax-hidden"> Main menu </span> </a> 
     <a id="ls-resp-search-trigger" data-bhw="RespSearchTrigger" class="ls-resp-header-trigger icon-magnifying-glass" aria-controls="ls-search-bar-wrapper" role="button"> <span class="ax-hidden"> Open search menu </span> </a> 
@@ -159,74 +144,57 @@
         <div class="row"> 
           <div id="ls-my-stuff-tabs" class="tabs-container ls-my-stuff">
             <ul class="tabs" data-bhw="UserProfileNavBar" data-bhw-path="UserProfileNavBar"> 
-                <li id="ls-my-groupons" data-bhc="UserProfileNavBarTab:My Groupons" data-bhc-path="UserProfileNavBar|UserProfileNavBarTab:My Groupons"><a href="mystuff.html">My Groupons</a> </li>
-                <li id="ls-my-linked-deals" data-bhc="UserProfileNavBarTab:My Groupon+ Deals" data-bhc-path="UserProfileNavBar|UserProfileNavBarTab:My Groupon+ Deals"><a href="mylinkeddeals.html">My Groupon+ Deals</a></li>
+                <li id="ls-my-groupons" data-bhc="UserProfileNavBarTab:My Groupons" data-bhc-path="UserProfileNavBar|UserProfileNavBarTab:My Groupons"><a href="mystuff.html">My Clickuu</a> </li>
+                <li id="ls-my-linked-deals" data-bhc="UserProfileNavBarTab:My Groupon+ Deals" data-bhc-path="UserProfileNavBar|UserProfileNavBarTab:My Groupon+ Deals"><a href="mylinkeddeals.html">My Cilckuu+ Deals</a></li>
                 <li id="ls-my-Wishlist" data-bhc="UserProfileNavBarTab:My Wishlist" data-bhc-path="UserProfileNavBar|UserProfileNavBarTab:My Wishlist"><a href="wishlist.html">My Wishlist</a> </li>
                 <li id="ls-my-account" data-bhc="UserProfileNavBarTab:My Account" class="active" data-bhc-path="UserProfileNavBar|UserProfileNavBarTab:My Account"><a href="account.html">Account</a> </li>
             </ul>
           </div>
         </div> 
-        <div class="claim-list" data-bhw="CLOClaimList"> 
-         <div class="no-claims row" data-bhw="CLONoClaims"> 
-          <div class="ten columns centered"> 
-           <div class="tutorial-wrapper center"> 
-           </div> 
-           <div class="steps row full  tutorial" data-bhw="CLOTutorial-full"> 
-            <h2 class="tutorial-title">How <span class="gplus-logo">
-              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 485 70"> 
-               <path d="M68.449 34.93c0 7.512-1.878 13.896-5.728 19.53-6.386 9.298-17.088 14.93-28.45 14.93-9.859 0-18.216-3.66-24.789-10.61C3.191 52.114 0 43.85 0 33.992 0 24.788 3.568 16.338 10.138 9.86 16.712 3.38 24.976 0 34.458 0c14.273 0 26.761 8.733 32.113 23.004H47.979c-4.132-4.319-8.45-6.476-13.708-6.476-9.765 0-17.464 7.979-17.464 17.555 0 10.612 8.261 18.78 17.464 18.78 6.196 0 11.736-3.191 15.024-9.013H30.234V30.516h38.028c.092 1.503.187 3.006.187 4.414zm4.135 33.148V1.314h22.159c7.04 0 12.393.472 16.9 3.664 5.916 4.13 9.015 10.42 9.015 18.685 0 10.798-5.635 18.872-15.117 21.5l16.338 22.915H101.69L88.92 46.572v21.506H72.584zm19.528-35.966c8.076 0 12.019-2.065 12.019-8.074 0-5.54-3.474-7.794-10.704-7.794H88.92v15.868h3.19zM133.334 9.86c6.574-6.48 14.835-9.765 24.32-9.765 8.92 0 17.368 3.476 23.847 9.86 6.761 6.665 10.331 15.21 10.331 24.319 0 9.576-3.38 18.12-9.672 24.6-6.478 6.76-15.307 10.42-24.6 10.42-9.86 0-18.31-3.564-24.882-10.514-6.29-6.666-9.485-14.93-9.485-24.788 0-9.203 3.568-17.654 10.141-24.132zm24.225 42.908c9.577 0 17.371-7.7 17.371-18.59 0-9.766-7.794-17.558-17.184-17.558-9.95 0-17.746 7.792-17.746 17.558 0 10.517 8.356 18.59 17.56 18.59zm54.93-51.454v41.128c0 7.51 2.347 11.36 7.887 11.36 5.729 0 8.451-3.756 8.451-11.36V1.314h16.337v41.785c0 16.34-9.951 26.007-24.881 26.007-15.117 0-24.224-9.292-24.224-26.007V1.314h16.43zm37.388 66.764V1.314h22.16c7.04 0 12.393.472 16.9 3.664 5.916 4.13 9.014 10.42 9.014 18.78 0 8.638-3.945 15.773-10.61 19.81-4.228 2.534-9.485 3.004-16.433 3.004h-4.694v21.506h-16.337zm19.529-35.966c8.075 0 12.019-2.065 12.019-8.074 0-5.54-3.475-7.794-10.704-7.794h-4.319v15.868h3.004zM310.25 9.86c6.574-6.48 14.835-9.765 24.32-9.765 8.92 0 17.37 3.476 23.847 9.86 6.761 6.665 10.331 15.21 10.331 24.319 0 9.576-3.38 18.12-9.672 24.6-6.478 6.76-15.306 10.42-24.6 10.42-9.86 0-18.31-3.564-24.882-10.514-6.29-6.666-9.485-14.93-9.485-24.788 0-9.203 3.568-17.654 10.141-24.132zm24.225 42.908c9.577 0 17.371-7.7 17.371-18.59 0-9.766-7.794-17.558-17.184-17.558-9.95 0-17.746 7.792-17.746 17.558 0 10.517 8.356 18.59 17.56 18.59zm37.473 15.31V1.314h14.74l24.507 37.089V1.313h16.337v66.764h-14.365l-24.88-37.184v37.184h-16.339zm82.99-56.256h14.466v15.64h15.55v14.466h-15.55v15.64h-14.466v-15.64H439.39V27.462h15.549v-15.64z" fill="#fff" fill-rule="evenodd" /> 
-              </svg> </span> Works</h2> 
-            <div class="tutorial-description">
-             Get up to 30% cash back at participating restaurants — nothing to print or show.
-            </div> 
-            <div class="steps-frame"> 
-             <div class="row full-steps-container"> 
-              <div class="columns small-grid-four step-container"> 
-               <div class="twelve columns small-grid-one step-icon-container"> 
-                <div class="step-icon first-step-icon"></div> 
-               </div> 
-               <div class="twelve columns small-grid-three step-text-container"> 
-                <span class="step-title">Enroll for Free</span> 
-                <span class="step-description">Enroll eligible cards to get cash back at all participating Groupon+ restaurants.</span> 
-               </div> 
-              </div> 
-              <div class="columns small-grid-four step-container"> 
-               <div class="twelve columns small-grid-one step-icon-container"> 
-                <div class="step-icon second-step-icon"></div> 
-               </div> 
-               <div class="twelve columns small-grid-three step-text-container"> 
-                <span class="step-title">Choose Deals</span> 
-                <span class="step-description">Choose specific Groupon+ deals to get up to 30% cash back!</span> 
-               </div> 
-              </div> 
-              <div class="columns small-grid-four step-container"> 
-               <div class="twelve columns small-grid-one step-icon-container"> 
-                <div class="step-icon third-step-icon"></div> 
-               </div> 
-               <div class="twelve columns small-grid-three step-text-container"> 
-                <span class="step-title">Visit and Save</span> 
-                <span class="step-description">Use enrolled cards at Groupon+ restaurants to get cash back to your card statement.</span> 
-               </div> 
-              </div> 
-             </div> 
-            </div> 
-           </div> 
-           <hr /> 
-           <!-- User has no cards --> 
-           <iframe src="/mybillingrecords/new_clo?iframe=true" id="add-new-card-iframe" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts"></iframe> 
-           <hr /> 
-           <div class="related-deals-container responsive"> 
-            <a id="see-deals" class="btn btn-primary btn-large" href="/occasion/groupon-plus" data-bhw="CLOSeeDeals"> See Deals </a> 
-            <div class="deals-widget-container"> 
-             <div id="related-deals-widget" class="columns centered hide cui-480-one-up"> 
-              <div id="related-deals-cards"></div> 
-             </div> 
-            </div> 
-            <a id="see-more-deals" class="btn btn-primary btn-large hide" href="/occasion/groupon-plus" data-bhw="CLOSeeMoreDeals"> See More Deals </a> 
-           </div> 
-          </div> 
-         </div> 
-        </div> 
+        <div class="main row">
+            <div class="twelve columns">
+              <section id="divisions" class="module">
+                <div class="module-body">
+                  <form id="master_form" autocomplete="on" method="POST" novalidate="">
+                    <input type="hidden" name="_csrf" value="pNwdPsAN-mM65FYHRauCAU9XD7f8nE77gSd4">
+                    <div class="field user_first_name text">
+                      <label class="medium" for="user_firstName">First Name</label>
+                      <input class="input six" id="user_firstName" name="user[firstName]" size="30" type="text" value="clickuu" data-parsley-required="true" data-parsley-trigger="change" data-parsley-id="19">
+                      <input type="hidden" name="user[orig_firstName]" value="clickuu">
+                    </div>
+                    <div class="field user_last_name text">
+                      <label class="medium" for="user_lastName">Last Name</label>
+                      <input class="input six" id="user_lastName" name="user[lastName]" size="30" type="text" value="" data-parsley-required="true" data-parsley-trigger="change" data-parsley-id="21">
+                      <input type="hidden" name="user[orig_lastName]" value="">
+                    </div>
+                    <div class="field email_address">
+                      <div class="emailAddress">Email Address</div>
+                      <span class="address">
+                        645283661@qq.com
+                          <a href="/myemailaddress" data-bhw="EmailChange" data-bhw-path="EmailChange">Change</a>
+                      </span>
+                    </div>
+                    <h3>Change Your Password</h3>
+                    <div class="field password">
+                      <label for="password">Current Password</label>
+                      <input type="password" class="six" name="user[password]" id="password" data-parsley-minlength="[6]" data-parsley-id="23">
+                    </div>
+                    <div class="field password">
+                      <label for="new_password">New Password</label>
+                      <input type="password" class="six" name="user[new_password]" id="new_password" data-parsley-equalto="#confirm_password" data-parsley-minlength="[6]" data-parsley-id="25" aria-autocomplete="list">
+                    </div>
+                    <div class="field password">
+                      <label for="confirm_password">Retype New Password</label>
+                      <input type="password" class="six" name="user[confirm_password]" id="confirm_password" data-parsley-equalto="#new_password" data-parsley-minlength="[6]" data-parsley-id="27">
+                    </div>
+                    <div class="submit-row">
+                      <input type="submit" class="btn-cta" value="Save Changes">
+                    </div>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
         <a href="/local/grouber.html" class="t-hide hide" aria-hidden="true"> Grouber </a> 
        </div> 
       </section> 
