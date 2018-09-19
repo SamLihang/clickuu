@@ -16,6 +16,9 @@
     <link href="./css/crystal_styles-05c99847ab.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./css/main_goods-cb36ba432f.css" />
     <style>
+      body{
+        background: #fff !important;
+      }
       .address-title{
         display: inline-block;
         width: 100px;
@@ -32,12 +35,9 @@
           padding-bottom: 10px;
       }
       #new-shipping-address {
-          height: 0;
-          overflow: hidden;
       }
-      #new-shipping-address.active{
-          height: auto;
-          overflow: visible
+      #wishlist .mod-wishlist-items{
+          margin-bottom: 0;
       }
       .save-btn{
         width: 100px;
@@ -49,7 +49,7 @@
         font-size: 18px;
         text-align: center;
       }
-      .logistics, .payment{
+      .logistics, .payment ,.orderSummary{
           margin-top: 20px;
       }
       .logistics .logistics-title {
@@ -62,11 +62,55 @@
         margin: 0;
         padding-left: 20px;
       }
-      .logistics-body, .payment-body{
+      .logistics-body, .payment-body, .orderSummary-body{
           border: 1px solid;
           border-top: 0;
-          padding: 20px 0;
+          padding: 20px 30px;
       }
+      .logistics .row .label.extra-payments{
+          margin: 1rem !important;
+      }
+      .logistics .row .paypal-container:nth-child(odd){
+        float: left;
+        width: 100px;
+      }
+      .logistics .row .paypal-container:nth-child(even){
+        float: right;
+        width: 40%;
+      }
+      #mod-shipping, #cart-overview-container, #mod-lists{
+          height: 780px;
+      }
+      #cart-overview-container, #mod-lists{
+          overflow: scroll;
+      }
+      #cart-overview-container::-webkit-scrollbar{width:0;}
+      #mod-lists::-webkit-scrollbar{width:0;}
+      #overview-subtotal span{
+        font: 400 14px OpenSans;
+        line-height: 27px;
+        color: #333;
+      }
+      .orderSummary span.big {
+        color: #333;
+        size: 18px;
+        font-weight: 700;
+      }
+      /* input[type=radio]+label:before
+      {
+        background-clip: content-box;
+        border-radius: 50%;
+        height: 0;
+        padding: .9rem;
+        width: 0;
+      }
+      input[type=radio].active+label:before{
+        background-color: var(--color-prim);
+        border-color: var(--color-prim);
+        height: 1.4rem;
+        padding: .2rem;
+        width: 1.4rem;
+      } */
     </style>
     <body dir="ltr" id="ls-body" class="brand-groupon no-js crystal-shopping-cart is-web ltr en_US en_XX">
         <div id="global-container">
@@ -151,7 +195,7 @@
                             </section>
                         </section>
                         <!-- 产品 -->
-                        <section class="lists-container column eight" style="width: 35%">
+                        <section id="mod-lists" class="lists-container column eight" style="width: 35%">
                             <section id="cart-items-container" class="">
                                 <section id="items" class="row">
                                     <div class="mod-messages-items">
@@ -523,9 +567,7 @@
                                                 </div>
                                                 <div class="field">
                                                     <label id="lbl-bldr--3">
-                                                        <div class="save-btn">
-                                                            save
-                                                        </div>
+                                                        <div class="save-btn">save</div>
                                                     </label>
                                                 </div>
                                             </fieldset>
@@ -610,27 +652,39 @@
                             <div class="logistics">
                                 <h2 class="c-bg-gray-bg c-bdr-gray-lt">logistics</h2>
                                 <div class="cart-overview logistics-body c-bdr-gray-lt">
-                                    <div class="row paypal-container above">
-                                        <input id="logistics1" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="paypal">
-                                        <label for="logistics1" class="label extra-payments" data-bhw="PayPal">
-                                            <div class="payment-wrapper">
-                                                <span class="hiddenLabel">
-                                                    logistics1
-                                                </span>
-                                            </div>
-                                        </label>
+                                    <div class="row">
+                                        <div class="paypal-container above">
+                                            <input id="logistics1" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="UPS">
+                                            <label for="logistics1" class="label extra-payments" data-bhw="PayPal">
+                                                <div class="payment-wrapper">
+                                                    <span class="hiddenLabel">
+                                                        UPS
+                                                    </span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="paypal-container above">
+                                            <input id="logistics2" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="DHL">
+                                            <label for="logistics2" class="label extra-payments" data-bhw="PayPal">
+                                                <div class="payment-wrapper">
+                                                    <span class="hiddenLabel">
+                                                        DHL
+                                                    </span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="paypal-container above">
+                                            <input id="logistics3" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="FedEX">
+                                            <label for="logistics3" class="label extra-payments" data-bhw="PayPal">
+                                                <div class="payment-wrapper">
+                                                    <span class="hiddenLabel">
+                                                        FedEX
+                                                    </span>
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="row paypal-container above">
-                                        <input id="logistics2" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="paypal">
-                                        <label for="logistics2" class="label extra-payments" data-bhw="PayPal">
-                                            <div class="payment-wrapper">
-                                                <span class="hiddenLabel">
-                                                    logistics2
-                                                </span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <hr>
+                                        <hr>
                                     <div class="overview-total">
                                         <div class="item row">
                                             <span class="columns seven">
@@ -647,7 +701,7 @@
                                 <h2 class="c-bg-gray-bg c-bdr-gray-lt">Payment method</h2>
                                 <div class="cart-overview payment-body c-bdr-gray-lt">
                                     <div class="row paypal-container above">
-                                        <input id="paymennt1" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="paypal">
+                                        <input id="paymennt1" checked title="Paypal" class="payment-methods-us active" type="radio" name="payment" data-group="billing_record_id" value="paypal">
                                         <label for="payment1" class="label extra-payments" data-bhw="PayPal">
                                             <div class="payment-wrapper">
                                                 <span class="confirmation-assets s-36 pm-icon cc-paypal-card">
@@ -659,6 +713,43 @@
                                         </label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="orderSummary"> 
+                                <h2 class="c-bg-gray-bg c-bdr-gray-lt">Order Summary</h2> 
+                                <div class="orderSummary-body c-bdr-gray-lt"> 
+                                <div class="details"> 
+                                <div id="overview-subtotal"> 
+                                <div class="item row"> 
+                                    <span class="seven columns">Subtotal</span> 
+                                    <span class="five columns ltr subtotal-amount">$33.98</span> 
+                                </div> 
+                                <div class="item row"> 
+                                    <span class="seven columns">Logistics</span> 
+                                    <span class="five columns ltr ">$3.99</span> 
+                                </div> 
+                                </div> 
+                                <input id="hidden-input" name="promoCode" type="hidden" value="" /> 
+                                <hr /> 
+                                <div id="overview-total"> 
+                                <div class="item row big"> 
+                                    <span class="seven columns big">Order Total:</span> 
+                                    <span class="five columns ltr final-amount">$37.97</span> 
+                                </div> 
+                                </div> 
+                                <div id="bucks-remaining"> 
+                                </div> 
+                                </div> 
+                                <div> 
+                                <div> 
+                                <div id="top-legal-disclaimers" class="legal-disclaimers"> 
+                                    <p id="accept-terms-and-conditions-disclaimer" class="legal-disclaimer"> <label>By clicking below I accept the current Terms of Use Privacy Statement.</label> </p> 
+                                </div> 
+                                <button class="btn complete-order" data-bhw="CompleteOrderButton" data-bhclick="CompleteOrderButton" role="button" data-bhw-path="ConfirmationForm|ModOverview|CompleteOrderButton"><span style="white-space: nowrap">Continue to PayPal</span> </button> 
+                                <div id="legal-disclaimers" class="legal-disclaimers"> 
+                                </div> 
+                                </div> 
+                                </div> 
+                                </div> 
                             </div>
                         </section>
                     </section>
@@ -1390,16 +1481,43 @@
                 1000);
 
         // edit address
+        // var radios = document.querySelectorAll('input[type=radio]')
+        var form = document.querySelectorAll('#form-holder input')
+        var formSelect = document.querySelector('#form-holder select')
         var editAddress = document.querySelector('.action.add')
         var newAddress = document.querySelector('#new-shipping-address')
+                
+        // radios.forEach(function(item) {
+            // item.addEventListener('click', function(e) {
+                // console.log(item.attributes)
+                // if(item.attributes)
+            // })
+        // })
+
         editAddress.addEventListener('click', function() {
-            newAddress.classList.add('active')
+            form.forEach(function(item) {
+                item.removeAttribute("disabled")
+            })
+            formSelect.removeAttribute("disabled")
+            saveBtn.innerHTML = "save"
         }, false)
 
         //save address
         var saveBtn = document.querySelector('.save-btn')
         saveBtn.addEventListener('click', function() {
-            newAddress.classList.remove('active')
+            if(saveBtn.innerHTML === "save") {
+                form.forEach(function(item) {
+                    item.setAttribute("disabled", false)
+                })
+                formSelect.setAttribute("disabled", false)
+                saveBtn.innerHTML="edit"
+            } else if (saveBtn.innerHTML === "edit") {
+                form.forEach(function(item) {
+                    item.removeAttribute("disabled")
+                })
+                formSelect.removeAttribute("disabled")
+                saveBtn.innerHTML = "save"
+            }
             //...some save address method
         }, false)
 

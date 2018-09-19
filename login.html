@@ -93,58 +93,21 @@
           <ul class="ls-cf unstyled"> 
            <div class="t-pod"> 
             <ul class="fieldset checkout"> 
-             <li class="field highlight-error c-bdr-gray-lt " id="field-signup-fullName-input"> <p class="inline-error c-txt-err" id="error-signup-fullName-input" data-bhc="text:error-message-signup-fullName-input"></p> <p class="inline-error-resolve c-txt-err" id="error-resolve-signup-fullName-input" data-bhc="text:error-resolve-signup-fullName-input"></p> 
-              <div class="field-input-wrapper c-bdr-gray-lt"> 
-               <label for="signup-fullName-input" class="accessibility_label">&quot;Full name&quot;</label> 
-               <input class="field-input signup-fullName-input" aria-label="Full name" placeholder="Full name" id="signup-fullName-input" type="text" data-bhc="text:full_name" tabindex="0" name="full_name" required="" autocorrect="off" autofocus="" /> 
-              </div> 
-              <div class="inline-clear icon-close " data-bhc="button:clear-field"></div> </li> 
              <li class="field highlight-error c-bdr-gray-lt" id="field-signup-email-input"> <p class="inline-error  c-txt-err" id="error-signup-email-input" data-bhc="text:error-message-signup-email-input"></p> <p class="inline-error-resolve" id="error-resolve-signup-email-input" data-bhc="text:error-resolve-signup-email-input"></p> 
               <div class="field-input-wrapper c-bdr-gray-lt"> 
                <label for="signup-email-input" class="accessibility_label">&quot;Email&quot;</label> 
                <input class="field-input signup-email-input" aria-label="Email" placeholder="Email" id="signup-email-input" type="email" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autocomplete="off" /> 
                <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
               </div> </li> 
-             <li class="field highlight-error" id="field-signup-password-input"> <p class="inline-error c-txt-err " id="error-signup-password-input" data-bhc="text:error-message-signup-password-input"></p> <p class="inline-error-resolve" id="error-resolve-signup-password-input" data-bhc="text:error-resolve-signup-password-input"></p> 
-              <div class="field-input-wrapper c-bdr-gray-lt"> 
-               <label for="signup-password-input" class="accessibility_label">&quot;Password&quot;</label> 
-               <input class="field-input signup-password-input" aria-label="Password" placeholder="Password" id="signup-password-input" type="password" data-bhc="password:password" tabindex="0" name="password" required="" /> 
-               <div class="inline-toggle inline-toggle-checkout" data-bhc="button:show-hide-password"></div> 
-              </div> </li> 
-             <li class="field highlight-error" id="field-signup-rememberMe-input"> <p class="inline-error c-txt-err" id="error-signup-rememberMe-input" data-bhc="text:error-message-signup-rememberMe-input"></p> <input id="signup-rememberMe-input" type="checkbox" data-bhc="checkbox:remember_me" tabindex="0" name="remember_me" checked="true" value="1" autocomplete="off" /> <label for="signup-rememberMe-input"> Keep me signed in on this computer </label> </li> 
-             <li class="field highlight-error" id="field-signup-newsletter-input"> <p class="inline-error c-txt-err" id="error-signup-newsletter-input" data-bhc="text:error-message-signup-newsletter-input"></p> <input id="signup-newsletter-input" type="checkbox" data-bhc="checkbox:newsletter" tabindex="0" name="newsletter" checked="true" value="1" autocomplete="off" /> <label for="signup-newsletter-input"> Yes, I want to save money by receiving personalized Groupon emails with awesome deals. </label> </li> 
              <li class="field highlight-error legal-info" id="field-signup-acceptTerms-input"> <input class="signup-acceptTerms-input-checkout" id="signup-acceptTerms-input" data-bhc="checkbox:accept_terms" tabindex="0" name="accept_terms" required="" type="hidden" autocomplete="off" /> <label for="signup-acceptTerms-input"> By clicking an option below, I agree to the <a data-bhc="link:terms" href="/terms" target=" _blank">Terms of Use</a> and the <a data-bhc="link:privacy" href="/privacy" target=" _blank">Privacy Statement</a>. </label> </li> 
             </ul> 
            </div> 
           </ul> 
-          <div class="touch-submit-container" data-bhc="button:submit-signup"> 
-           <a tabindex="0" role="button" class="c-txt-white t-button btn-cta submit-trigger" id="signup-button">Sign Up</a> 
+          <div class="touch-submit-container" id="sendEmail" data-bhc="button:submit-signup"> 
+           <a tabindex="0" role="button" class="c-txt-white t-button btn-cta submit-trigger" id="signup-button">Next</a> 
           </div> 
          </fieldset> 
         </form> 
-        <div class="or-text">
-         or
-        </div> 
-        <div class="social-container " data-bhw="SocialMediaSignup"> 
-         <div class="social-buttons-container"> 
-          <div class="facebook-login" data-bhw="FacebookLogin"> 
-           <div class="facebook-login-button new-icon" tabindex="0"> 
-            <div class="custom-icon-facebook"></div> 
-            <div class="facebook-button-text"> 
-             <span class="text-facebook">Sign up with Facebook</span> 
-            </div> 
-           </div> 
-          </div> 
-          <div class="google-signin-button" data-bhw="GoogleLoginButton" tabindex="0" role="button"> 
-           <div class="google-icon-block"> 
-            <span class="icon-google-signin"></span> 
-           </div> 
-           <div class="google-button-text"> 
-            <span class="text-google"> Sign up with Google </span> 
-           </div> 
-          </div> 
-         </div> 
-        </div> 
        </div> 
       </div> 
      </div> 
@@ -175,6 +138,16 @@
       login.classList.add('c-bdr-gray-clr')
       content[1].classList.add('active')
       content[0].classList.remove('active')
+    })
+
+    var send = document.querySelector('#sendEmail') 
+    send.addEventListener('click', function() {
+      // login.classList.remove('c-bdr-gray-clr')
+      // login.classList.add('active', 'c-bdr-prim')
+      // signup.classList.remove('active', 'c-bdr-prim')
+      // signup.classList.add('c-bdr-gray-clr')
+      // content[0].classList.add('active')
+      content[1].classList.remove('active')
     })
   })()
  </script>
