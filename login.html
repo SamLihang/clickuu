@@ -28,6 +28,21 @@
      text-align: left
    }
    .registed-successful p {}
+   .tab-content-item {
+
+   }
+   .tab-content-item p {
+     float: left;
+     line-height: 50px;
+     margin: 0 20px 0 0 ;
+   }
+   .tab-content-title{
+     width: 140px;
+     text-align: right
+   }
+   .inline-error {
+     margin-left: 160px;
+   }
   </style>
  </head>
  <body dir="ltr" id="ls-body" class="brand-groupon no-js login is-web ltr en_US en_XX"> 
@@ -72,9 +87,9 @@
        <li class="signup-tab c-bdr-gray-clr" id="signup-tab-checkout" data-bhc="tab:signup"> I'm a new customer </li> 
       </ul> 
       <ul class="tabs checkout hide">
-        <li class="login-tab active c-bdr-prim" style="width: 33%" id="checkout-email" data-bhc="tab:login"> Validate e-mail address </li> 
-        <li class="signup-tab c-bdr-gray-clr" style="width: 33%" id="fill-in-information" data-bhc="tab:signup"> Fill in information </li> 
-        <li class="signup-tab c-bdr-gray-clr" style="width: 33%" id="signup-success" data-bhc="tab:signup"> Registered successfully </li> 
+        <li class="login-tab active c-bdr-prim" style="width: 33%" id="checkout-email" data-bhc="tab:login"> Verification </li> 
+        <li class="signup-tab c-bdr-gray-clr" style="width: 33%" id="fill-in-information" data-bhc="tab:signup"> Information </li> 
+        <li class="signup-tab c-bdr-gray-clr" style="width: 33%" id="signup-success" data-bhc="tab:signup"> Complete </li> 
       </ul> 
       <!-- content -->
       <div class="tab-contents-checkout"> 
@@ -127,21 +142,23 @@
                <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
               </div> 
              </li>
-             <li class="field highlight-error" id="field-signup-rememberMe-input">
+             <!-- <li class="field highlight-error" id="field-signup-rememberMe-input">
               <p class="inline-error c-txt-err" id="error-signup-rememberMe-input" data-bhc="text:error-message-signup-rememberMe-input"></p>
               <input id="signup-rememberMe-input" type="checkbox" data-bhc="checkbox:remember_me" tabindex="0" name="remember_me" checked="true" value="1" autocomplete="off" data-bhc-path="TabbedLoginPage|SignupForm|checkbox:remember_me">
               <label for="signup-rememberMe-input">
                Keep me signed in on this computer
               </label>
-             </li>
+             </li> -->
              <li class="field highlight-error" id="field-signup-newsletter-input">
               <p class="inline-error c-txt-err" id="error-signup-newsletter-input" data-bhc="text:error-message-signup-newsletter-input"></p>
               <input id="signup-newsletter-input" type="checkbox" data-bhc="checkbox:newsletter" tabindex="0" name="newsletter" checked="true" value="1" autocomplete="off">
               <label for="signup-newsletter-input">
-                Yes, I want to save money by receiving personalized Groupon emails with awesome deals.
+                Upon creating my account, I agree to:<br/>
+                - The <a>ClickUU.com User Agreement</a><br/>
+                - Receive emails related to ClickUU.com membership and services
               </label>
              </li> 
-             <li class="field highlight-error legal-info" id="field-signup-acceptTerms-input"> <input class="signup-acceptTerms-input-checkout" id="signup-acceptTerms-input" data-bhc="checkbox:accept_terms" tabindex="0" name="accept_terms" required="" type="hidden" autocomplete="off" /> <label for="signup-acceptTerms-input"> By clicking an option below, I agree to the <a data-bhc="link:terms" href="/terms" target=" _blank">Terms of Use</a> and the <a data-bhc="link:privacy" href="/privacy" target=" _blank">Privacy Statement</a>. </label> </li> 
+             <!-- <li class="field highlight-error legal-info" id="field-signup-acceptTerms-input"> <input class="signup-acceptTerms-input-checkout" id="signup-acceptTerms-input" data-bhc="checkbox:accept_terms" tabindex="0" name="accept_terms" required="" type="hidden" autocomplete="off" /> <label for="signup-acceptTerms-input"> By clicking an option below, I agree to the <a data-bhc="link:terms" href="/terms" target=" _blank">Terms of Use</a> and the <a data-bhc="link:privacy" href="/privacy" target=" _blank">Privacy Statement</a>. </label> </li>  -->
             </ul> 
            </div> 
           </ul> 
@@ -152,9 +169,9 @@
         </form> 
        </div>
        <div class="tab-content checkout-email-content">
-        <p>Verify that the mailbox has been sent <a href="" class="user-email">316461408@qq.com</a></p> 
-        <p>Please log in the mailbox and click the activation link to complete the album. The activation link will be valid within 24 hours.</p>
-        <a tabindex="0" role="button" class="c-txt-white t-button btn-cta submit-trigger check-email-btn">Please check the email</a><a href="" class="no-mail">No mail received？</a> 
+        <p>A confirmation email has been sent to your<br/>mailbox <a href="" class="user-email">316461408@qq.com</a></p> <br/>
+        <p>Please check your email box and continue your registration within 24 hours.</p>
+        <a tabindex="0" role="button" class="c-txt-white t-button btn-cta submit-trigger check-email-btn">Go check email</a><a href="" class="no-mail">Having problem receiving email？</a> 
        </div> 
        <div class="tab-content fill-in-info">
         <form id="login-form" novalidate="" action="" method="post" data-bhw="LoginForm"> 
@@ -163,61 +180,100 @@
             <input type="hidden" name="_csrf" value="cD3APE8C-GDl-0g_CtJS2yPt7p87LI3YpW5g" /> 
             <div class="t-pod"> 
             <ul class="fieldset checkout"> 
-              <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err active" id="error-login-email-input" data-bhc="text:error-message-login-email-input">this is a error</p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Company Name&quot;</label> 
-                  <input class="field-input login-email-input" placeholder="Company Name" id="login-email-input" type="text" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
-              </li> 
-              <li class="field highlight-error" id="field-login-password-input"> <p class="inline-error c-txt-err " id="error-login-password-input" data-bhc="text:error-message-login-password-input"></p> <p class="inline-error-resolve" id="error-resolve-login-password-input" data-bhc="text:error-resolve-login-password-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-password-input" class="accessibility_label">&quot;Main product&quot;</label> 
-                  <input class="field-input login-password-input" aria-label="Password" placeholder="Main product" id="login-password-input" type="text" data-bhc="password:password" tabindex="0" name="password" required="" /> 
-                  <div class="inline-toggle inline-toggle-checkout" data-bhc="button:show-hide-password"></div> 
-                </div> 
+              <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Username</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt" style="border: none"> 
+                    <p>316461408@qq.com</p>
+                  </div> 
+                </div>
               </li>
               <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Telephone&quot;</label> 
-                  <input class="field-input login-email-input" aria-label="Email" placeholder="Telephone" id="login-email-input" type="tel" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Password</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt"> 
+                    <label for="login-email-input" class="accessibility_label">&quot;Password&quot;</label> 
+                    <input class="field-input login-email-input" aria-label="Email" placeholder="Please enter your password" id="login-email-input" type="password" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
+                    <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
+                  </div> 
+                </div>
+              </li>       
+              <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Confirm password</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt"> 
+                    <label for="login-email-input" class="accessibility_label">&quot;Password&quot;</label> 
+                    <input class="field-input login-email-input" aria-label="Email" placeholder="Please retype your password" id="login-email-input" type="password" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
+                    <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
+                  </div> 
+                </div>
               </li> 
               <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Address&quot;</label> 
-                  <input class="field-input login-email-input" aria-label="Email" placeholder="Email" id="login-email-input" type="Address" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Location</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt" style="border: none"> 
+                    <select title="State/Province" style="border-color: #d5d8db;margin: 0" aria-labelledby="lbl-bldr-5" id="state" name="shipping_address[state]" class="eight address-field" data-id="state" data-trigger="change" data-parsley-trigger="change" autocomplete="shipping address-level1" data-bhw="State" data-required="true" data-parsley-required="true">
+                      <option value="">
+                          Select
+                      </option>
+                    </select>
+                  </div> 
+                </div>
               </li> 
               <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Country&quot;</label> 
-                  <input class="field-input login-email-input" aria-label="Email" placeholder="Country" id="login-email-input" type="text" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">I am a</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt" style="border: none; display: inline-block;"> 
+                      <input id="supplier" title="Paypal" checked class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="usertype">
+                      <label for="supplier" class="label extra-payments" data-bhw="PayPal">
+                          <div class="payment-wrapper">
+                              <span class="hiddenLabel">
+                                  Supplier
+                              </span>
+                          </div>
+                      </label>
+                  </div> 
+                  <div class="field-input-wrapper c-bdr-gray-lt" style="border: none; display: inline-block;margin-left: 20px"> 
+                    <input id="buyer" title="Paypal" class="payment-methods-us" type="radio" name="billing_record[payment_id]" data-group="billing_record_id" value="usertype">
+                    <label for="buyer" class="label extra-payments" data-bhw="PayPal">
+                        <div class="payment-wrapper">
+                            <span class="hiddenLabel">
+                                Buyer
+                            </span>
+                        </div>
+                    </label>
+                  </div>
+                </div>
+              </li> 
+              <li class="field highlight-error" id="field-login-password-input"> <p class="inline-error c-txt-err " id="error-login-password-input" data-bhc="text:error-message-login-password-input"></p> <p class="inline-error-resolve" id="error-resolve-login-password-input" data-bhc="text:error-resolve-login-password-input"></p> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Full name</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt"> 
+                    <label for="login-password-input" class="accessibility_label">&quot;Main product&quot;</label> 
+                    <input class="field-input login-password-input" aria-label="Password" placeholder="Main product" id="login-password-input" type="text" data-bhc="password:password" tabindex="0" name="password" required="" /> 
+                    <div class="inline-toggle inline-toggle-checkout" data-bhc="button:show-hide-password"></div> 
+                  </div> 
+                </div>
+              </li>
+              <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err active" id="error-login-email-input" data-bhc="text:error-message-login-email-input">this is a error</p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Company name</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt"> 
+                    <label for="login-email-input" class="accessibility_label">&quot;Company Name&quot;</label> 
+                    <input class="field-input login-email-input" placeholder="Must be a legally registered company" id="login-email-input" type="text" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
+                    <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
+                  </div> 
+                </div>
               </li> 
               <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Purchase quantity of year&quot;</label> 
-                  <input class="field-input login-email-input" aria-label="Email" placeholder="text" id="login-email-input" type="Purchase quantity of year" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
-              </li> 
-              <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Purchase&quot;</label> 
-                  <input class="field-input login-email-input" aria-label="Email" placeholder="Purchase" id="login-email-input" type="email" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
-              </li> 
-              <li class="field highlight-error c-bdr-gray-lt" id="field-login-email-input"> <p class="inline-error  c-txt-err" id="error-login-email-input" data-bhc="text:error-message-login-email-input"></p> <p class="inline-error-resolve" id="error-resolve-login-email-input" data-bhc="text:error-resolve-login-email-input"></p> 
-                <div class="field-input-wrapper c-bdr-gray-lt"> 
-                  <label for="login-email-input" class="accessibility_label">&quot;Password&quot;</label> 
-                  <input class="field-input login-email-input" aria-label="Email" placeholder="Purchase" id="login-email-input" type="password" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
-                  <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
-                </div> 
+                <div class="tab-content-item">
+                  <p class="tab-content-title">Tel</p>
+                  <div class="field-input-wrapper c-bdr-gray-lt"> 
+                    <label for="login-email-input" class="accessibility_label">&quot;Telephone&quot;</label> 
+                    <input class="field-input login-email-input" aria-label="Email" placeholder="Telephone" id="login-email-input" type="tel" data-bhc="email:email" tabindex="0" name="email" required="" autocorrect="off" autofocus="" /> 
+                    <div class="inline-clear icon-close  inline-clear-checkout" data-bhc="button:clear-field"></div> 
+                  </div> 
+                </div>
               </li> 
             </ul> 
             </div> 
@@ -228,8 +284,8 @@
         </form> 
        </div>
        <div class="tab-content registed-successful">
-        <p>Registed successfully</p>
-        <a tabindex="0" role="button" class="c-txt-white t-button btn-cta submit-trigger check-email-btn">Go to shop</a>
+        <p>You have signed in to your account. You can now directly access your account.</p>
+        <a tabindex="0" role="button" class="c-txt-white t-button btn-cta submit-trigger check-email-btn">Access Now</a>
        </div>
       </div> 
      </div> 
