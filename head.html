@@ -1,0 +1,315 @@
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+  <link rel="stylesheet" href="./css/desktop-grpn-v6.0-a9dc6af17c.css" /> 
+  <link rel="stylesheet" href="./css/gig-grpn-v7-a9dc6af17c.css" /> 
+  <title>head</title> 
+  <style>
+    .primary-nav-tab {
+      position: relative;
+    }
+    .primary-nav .primary-nav-tab.active::after{
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border: 8px solid transparent;
+      border-bottom-color: var(--color-white);
+      background: var(--color-prim);
+      margin: 0;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 100%;
+      border: 0;
+    }
+    .cart-img{
+      width: 82px;
+      height: 50px
+    }
+    .hide {
+      display: none !important;
+    }
+    .ls-groupon-logo span{
+      color: #fff;
+      font-size: 25px;
+      font-weight: 800;
+    }
+    .search-box {
+      padding: 0 0 0 10px;
+    }
+    .ls-header-search-button{
+      background: #fff;
+      font-weight: 300;
+    }
+    .ls-header-search-button:before {
+      color: #222;
+      margin-right: 10px;
+    }
+    .ls-header-search-button {
+      width: auto;
+      padding: 0 15px;
+    }
+    #ls-signin-email,#ls-signin-pw {
+      top: 0;
+      height: 100%;
+    }
+  </style>
+ </head> 
+ <body> 
+  <div class="header-v2"> 
+   <header data-bhw="Header" role="banner" class="header big-searchbar" id="ls-header" data-bhw-path="Header"> 
+    <div class="ls-header-top" style=""> 
+     <div class="row ls-header-top-row ls-header-with-signin-flyout" id="ls-header-top-row"> 
+      <a href="/" id="ls-groupon-logo" class="ls-groupon-logo" data-bhw="Logo" title="Groupon" data-bhw-path="Header|Logo"> <span>CLICKUU</span> 
+      </a> 
+      <div id="ls-header-main" class="ls-clearfix alternative-search"> 
+       <div id="ls-search-bar-wrapper" class="columns search-bar-wrapper ls-inbox-enabled"> 
+        <form class="search-bar-v2" id="ls-search-form" data-bhw="SearchBar" role="search" action="" aria-label="Search Groupon" data-bhw-path="Header|SearchBar">
+         <div class="search-box deal-search">
+          <!-- <label id="placeholderSearch" class="ls-flex-placeholder" for="ls-search">Search Groupon</label> -->
+          <input type="search" name="search" id="ls-search" placeholder="Search Groupon" data-bhw="FreeTextSearchField" spellcheck="false" aria-labelledby="placeholderSearch" aria-autocomplete="list" aria-haspopup="true" aria-owns="autocomplete-list" aria-busy="true" maxlength="50" autocomplete="off" data-bhw-path="Header|SearchBar|FreeTextSearchField" /> 
+         </div>
+         <button id="ls-header-search-button" class="ls-header-search-button icon-magnifying-glass" type="submit" data-bhw="LocationBarFindDeals" data-bhw-path="Header|SearchBar|LocationBarFindDeals">Search</button> 
+        </form> 
+        <!-- 铃铛 -->
+        <div id="ls-header-inbox-flyout-container">
+         <span id="bell" role="button" class="ls-h-bell" data-bhw="NotificationsInbox" aria-haspopup="true" aria-owns="ls-inbox-flyout" aria-label="Notifications Inbox" data-bhw-path="Header|NotificationsInbox">
+          <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+           <path fill="#FFF" d="M10.956 2.049a1.073 1.073 0 0 1-.095-.443C10.861.995 11.371.5 12 .5s1.139.495 1.139 1.106c0 .157-.034.307-.096.443 2.544.358 4.315 2.051 5.37 4.667.804 1.99 1.134 4.342 1.134 6.504 0 1.12.631 2.493 1.633 3.87.813 1.121-.02 2.656-1.408 2.656h-3.909C15.837 21.825 14.117 23.5 12 23.5s-3.838-1.675-3.864-3.754H4.228c-1.388 0-2.221-1.535-1.408-2.657 1.001-1.376 1.633-2.748 1.633-3.87 0-2.16.33-4.513 1.133-6.503 1.056-2.616 2.827-4.31 5.37-4.667zm-.985 17.697c.026 1.078.923 1.944 2.029 1.944 1.105 0 2.003-.866 2.028-1.944H9.971zm7.741-6.526c0-5.252-1.687-9.432-5.712-9.432-4.025 0-5.713 4.18-5.713 9.432 0 1.526-.708 3.128-1.827 4.716h15.08c-1.12-1.59-1.828-3.19-1.828-4.716z"></path>
+          </svg>
+         </span>
+          <!-- 铃铛推送 -->
+         <div id="ls-inbox-flyout" class="ls-inbox-flyout ls-prompt inbox-flyout" data-bhw="inbox" aria-labelledby="bell" data-bhw-path="Header|inbox">
+          <div class="ls-inbox-list ls-pane-content">
+           <div class="ls-inbox-item ls-inbox-item-viewed" data-id="24917771-b1da-4816-a465-724c49df30d0" data-bhd="{&quot;title&quot;:&quot;Lowest Price Ever!&quot;,&quot;message&quot;:&quot;Celebrate bObsweep's Birthday with this special discount&quot;,&quot;id&quot;:29109}" data-bhc="notification:24917771-b1da-4816-a465-724c49df30d0" aria-label="Lowest Price Ever!" href="/deals/gg-bobsweep-standard-or-pethair-robotic-vacuum-cleaner-and-mop" role="button" style="background-image: url(&quot;https://img.grouponcdn.com/deal/F52FcHzV8VfaDgAdUnWK1Tm7jSW/F5-1400x840.jpg&quot;);" data-bhc-path="Header|inbox|notification:24917771-b1da-4816-a465-724c49df30d0">
+            <div class="ls-inbox-item-details">
+             <div class="ls-inbox-item-title" role="heading">
+              Lowest Price Ever!
+             </div>
+             <div class="ls-inbox-item-msg">
+              Celebrate bObsweep's Birthday with this special discount
+             </div>
+             <div class="ls-inbox-item-time" data-start="2018-10-05T07:00:00Z">
+              <span class="time">7 hours</span>
+             </div>
+            </div>
+            <div class="ls-inbox-item-unviewed-dot"></div>
+           </div>
+           <div class="ls-inbox-item ls-inbox-item-viewed" data-id="774e8af3-ae6f-46ae-ab93-8faef01c8ca8" data-bhd="{&quot;title&quot;:&quot;Best of October Sale&quot;,&quot;message&quot;:&quot;Shop fall activities, dining, beauty, &amp; more at up to 80% off. Ends 10/6.\r\n&quot;,&quot;id&quot;:29149}" data-bhc="notification:774e8af3-ae6f-46ae-ab93-8faef01c8ca8" aria-label="Best of October Sale" href="/occasion/sale" role="button" style="background-image: url(&quot;https://img.grouponcdn.com/message-service/k55wTdmHTkpzEpj2EtTVLKt8vkX/k5-512x512&quot;);" data-bhc-path="Header|inbox|notification:774e8af3-ae6f-46ae-ab93-8faef01c8ca8">
+            <div class="ls-inbox-item-details">
+             <div class="ls-inbox-item-title" role="heading">
+              Best of October Sale
+             </div>
+             <div class="ls-inbox-item-msg">
+              Shop fall activities, dining, beauty, &amp; more at up to 80% off. Ends 10/6. 
+             </div>
+             <div class="ls-inbox-item-time" data-start="2018-10-05T07:00:00Z">
+              <span class="time">7 hours</span>
+             </div>
+            </div>
+            <div class="ls-inbox-item-unviewed-dot"></div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <!-- 未登录 -->
+        <div id="ls-header-lower-signin-container" class="ls-header-lower-signin-container"> 
+          <div id="ls-header-signin-flyout-container"> 
+            <a class="first user-menu-item user-menu-action signin-flyout-menu-item referrer-link" id="ls-user-signin-with-flyout" rel="nofollow" data-bhw="UserSignIn" href="https://www.livingsocial.com/login?metric=layout_login&amp;return_to=https%3A%2F%2Fwww.livingsocial.com%2F" data-bhw-path="Header|UserSignIn" data-href="https://www.livingsocial.com/login"> Sign In | My Stuff </a> 
+            <!-- 显示登录界面 +class show -->
+            <div id="ls-signin-flyout" class="ls-signin-flyout ls-prompt my-stuff signin-flyout"> 
+            <div class="ls-signin-flyout-container"> 
+              <div id="ls-signin-flyout-mystuff-pane" class="ls-signin-flyout-mystuff-pane" role="menu">
+              <span class="accessibility-hidden" id="user-menu-description">My Stuff</span> 
+              <a role="menuitem" class="my-stuff-item my-stuff-item-primary icon-tag" id="user-my-groupon" href="/login?metric=layout_login&amp;ref=%2Fmystuff" data-bhw="user-flyout-mygroupons-link" data-bhw-path="Header|user-flyout-mygroupons-link"><span class="primary-link-text">My Clickuu</span></a> 
+              <a role="menuitem" class="my-stuff-item my-stuff-item-primary" id="user-my-card-linked-deals" href="/login?metric=layout_login&amp;ref=%2Fmylinkeddeals" data-bhw="user-flyout-mycardlinkeddeals-link" data-bhw-path="Header|user-flyout-mycardlinkeddeals-link"><svg alt="" class="primary-link-icon" width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="M22.4 0c.884 0 1.6.723 1.6 1.615V17.77c0 .892-.716 1.616-1.6 1.616H1.6c-.884 0-1.6-.724-1.6-1.616V1.615C0 .723.716 0 1.6 0h20.8zm0 17.77V1.614H1.6V17.77h20.8zm-18-3.232c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.6 0c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.6 0c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.6 0c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.875-3.861a.582.582 0 0 1-.447.172.584.584 0 0 1-.447-.172L8.173 8.346a.603.603 0 0 1 0-.845.586.586 0 0 1 .835 0l1.647 1.911 5.137-5.198a.586.586 0 0 1 .835 0c.23.233.23.611 0 .845l-5.552 5.618zm1.795 2.246c.096 0 .173.09.173.202v1.416l.522-.003c.096 0 .174.09.174.202 0 .112-.078.202-.174.202h-1.391c-.096 0-.174-.09-.174-.202 0-.111.078-.202.174-.202h.522l-.006-1.211h-.516c-.096 0-.174-.09-.174-.202 0-.112.078-.202.174-.202h.696zm1.347 2.02c-.096 0-.174-.091-.174-.203v-.807c0-.112.078-.202.174-.202l1.218-.002v-.402h-1.218c-.096 0-.174-.09-.174-.202 0-.112.078-.202.174-.202h1.392c.096 0 .174.09.174.202v.808c0 .111-.078.202-.174.202H14.39v.403h1.218c.096 0 .174.09.174.202 0 .112-.078.202-.174.202h-1.392zm5.386-.203v-.605h-1.218c-.096 0-.174-.09-.174-.202v-.808c0-.112.078-.202.174-.202.096 0 .174.09.174.202l-.002.606h1.046v-.606c0-.112.078-.202.174-.202.096 0 .174.09.174.202v1.615c0 .112-.078.202-.174.202-.096 0-.174-.09-.174-.202zm-2.066-1.011v-.402H16.32c-.096 0-.174-.09-.174-.202 0-.112.078-.202.174-.202h1.391c.096 0 .174.09.174.202v1.615s-.008.202-.174.202h-1.39s-.175-.02-.175-.202c0-.18.147-.199.147-.199h1.253v-.406h-.792s-.174-.009-.174-.202c0-.194.174-.202.174-.202l.783-.002z"></path></svg> <span class="primary-link-text">My Groupon+ Deals</span></a>
+              <a role="menuitem" class="my-stuff-item my-stuff-item-primary icon-heart" id="user-wishlish" href="/login?metric=layout_login&amp;ref=%2Fwishlist" data-bhw="user-flyout-wishlist-link" data-bhw-path="Header|user-flyout-wishlist-link"><span class="primary-link-text">My Wishlist</span></a> 
+              <div role="separator" class="my-stuff-item-separator"></div> 
+              <a role="menuitem" class="my-stuff-item my-stuff-item-secondary" id="user-account" data-bhw="UserAccount" href="/login?metric=layout_login&amp;ref=%2Fmyaccount" data-bhw-path="Header|UserAccount">Account</a> 
+              </div> 
+              <div id="ls-signin-flyout-signin-pane" class="ls-signin-flyout-signin-pane"> 
+              <div class="ls-signin-error-msg" id="ls-signin-error"></div> 
+              <form id="ls-signin-form" class="form-v2-1 ls-signin-form" data-bhw="ls-signin-form" method="post" action="/login?metric=layout_login" novalidate="" data-bhw-path="Header|ls-signin-form"> 
+                <fieldset> 
+                <legend class="ax-hidden">Sign in to access your Vouchers</legend> 
+                <input type="hidden" name="_csrf" value="T5IzqrCL-3FQYriYa7ksjKjny5dGQ81IkvY8" /> 
+                <!-- email 输入框 -->
+                <div class="gig-field field-inputs filled" id="field-email-input">
+                  <input class="field-input" id="ls-signin-email" placeholder="Email" type="email" tabindex="0" name="email" autocorrect="off" /> 
+                  <span class="icon icon-email"></span> 
+                </div> 
+                <!-- password 输入框 -->
+                <div class="gig-field field-inputs" id="field-password-input"> 
+                  <input class="field-input" id="ls-signin-pw" placeholder="Password" type="password" tabindex="0" name="password" /> 
+                  <span class="icon icon-key"></span> 
+                </div> 
+                <div class="signin-remember-forgot"> 
+                  <div class="signin-remember"> 
+                  <input type="checkbox" id="ls-remember-me" name="remember_me" checked="" data-bhc="checkbox:remember_me" tabindex="0" data-bhc-path="Header|ls-signin-form|checkbox:remember_me" /> 
+                  <label for="ls-remember-me">Remember Me</label> 
+                  </div> 
+                  <div class="signin-forgot"> 
+                  <a id="ls-forgot-password" href="/forgot_password" rel="nofollow" tabindex="0">Forgot Password?</a> 
+                  </div> 
+                </div> 
+                <button class="btn-cta btn-signin" type="submit" tabindex="0">Sign In</button> 
+                </fieldset> 
+              </form> 
+              </div> 
+            </div> 
+            </div> 
+            <div id="ls-fb-auth-modal" class="modal ls-social-modal"> 
+            <div class="modal-body"> 
+              <div> 
+              <div class="fb-reauth" data-bhw="FacebookReauth"> 
+                <div class="row"> 
+                <div class="text-center"> 
+                  <div role="heading" class="section-title">
+                  Groupon didn't get your email from Facebook, but we need it to sign you up.
+                  </div> 
+                </div> 
+                <p>If you'd like to share it with us so you can take advantage of Facebook Login, you can update your Facebook permissions to give us access to your email. If not, you can always sign up for a Groupon account without using Facebook.</p> 
+                </div> 
+                <div class="row text-center"> 
+                <button class="btn" id="fb-auth" role="button">Update Facebook Permissions</button> 
+                <a class="close-modal" id="fb-auth-close">No, thanks</a> 
+                </div> 
+              </div> 
+              </div> 
+            </div> 
+            </div> 
+          </div>
+        </div> 
+        <!-- 登录 -->
+        <div id="ls-header-lower-signin-container" class="ls-header-lower-signin-container hide"> 
+         <a id="user-name" data-bhw="UserName" href="/mystuff" rel="nofollow" aria-haspopup="true" aria-describedby="user-menu-description" data-user-name="clickuu" class="last user-menu-item user-menu-action user-name lstouch" data-bhw-path="Header|UserName"><span class="icon-arrow-down-large"> clickuu </span></a>
+         <div id="ls-my-stuff" class="my-stuff signin-flyout" role="menu" aria-labelledby="user-menu-description">
+          <span class="accessibility-hidden" id="user-menu-description">My Stuff</span> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-primary icon-tag" id="user-my-groupon" href="/mystuff" data-bhw="user-flyout-mygroupons-link" data-bhw-path="Header|user-flyout-mygroupons-link"><span class="primary-link-text">My Groupons</span></a> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-primary" id="user-my-card-linked-deals" href="/mylinkeddeals" data-bhw="user-flyout-mycardlinkeddeals-link" data-bhw-path="Header|user-flyout-mycardlinkeddeals-link">
+           <svg alt="" class="primary-link-icon" width="24" height="20" viewbox="0 0 24 20" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M22.4 0c.884 0 1.6.723 1.6 1.615V17.77c0 .892-.716 1.616-1.6 1.616H1.6c-.884 0-1.6-.724-1.6-1.616V1.615C0 .723.716 0 1.6 0h20.8zm0 17.77V1.614H1.6V17.77h20.8zm-18-3.232c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.6 0c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.6 0c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.6 0c-.22 0-.4-.18-.4-.403 0-.223.18-.404.4-.404.22 0 .4.18.4.404 0 .223-.18.403-.4.403zm1.875-3.861a.582.582 0 0 1-.447.172.584.584 0 0 1-.447-.172L8.173 8.346a.603.603 0 0 1 0-.845.586.586 0 0 1 .835 0l1.647 1.911 5.137-5.198a.586.586 0 0 1 .835 0c.23.233.23.611 0 .845l-5.552 5.618zm1.795 2.246c.096 0 .173.09.173.202v1.416l.522-.003c.096 0 .174.09.174.202 0 .112-.078.202-.174.202h-1.391c-.096 0-.174-.09-.174-.202 0-.111.078-.202.174-.202h.522l-.006-1.211h-.516c-.096 0-.174-.09-.174-.202 0-.112.078-.202.174-.202h.696zm1.347 2.02c-.096 0-.174-.091-.174-.203v-.807c0-.112.078-.202.174-.202l1.218-.002v-.402h-1.218c-.096 0-.174-.09-.174-.202 0-.112.078-.202.174-.202h1.392c.096 0 .174.09.174.202v.808c0 .111-.078.202-.174.202H14.39v.403h1.218c.096 0 .174.09.174.202 0 .112-.078.202-.174.202h-1.392zm5.386-.203v-.605h-1.218c-.096 0-.174-.09-.174-.202v-.808c0-.112.078-.202.174-.202.096 0 .174.09.174.202l-.002.606h1.046v-.606c0-.112.078-.202.174-.202.096 0 .174.09.174.202v1.615c0 .112-.078.202-.174.202-.096 0-.174-.09-.174-.202zm-2.066-1.011v-.402H16.32c-.096 0-.174-.09-.174-.202 0-.112.078-.202.174-.202h1.391c.096 0 .174.09.174.202v1.615s-.008.202-.174.202h-1.39s-.175-.02-.175-.202c0-.18.147-.199.147-.199h1.253v-.406h-.792s-.174-.009-.174-.202c0-.194.174-.202.174-.202l.783-.002z"></path>
+           </svg> <span class="primary-link-text">My Groupon+ Deals</span></a> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-primary icon-heart" id="user-wishlish" href="/wishlist" data-bhw="user-flyout-wishlist-link" data-bhw-path="Header|user-flyout-wishlist-link"><span class="primary-link-text">My Wishlist</span></a> 
+          <div role="separator" class="my-stuff-item-separator"></div> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-secondary" id="user-account" data-bhw="UserAccount" href="/myaccount" data-bhw-path="Header|UserAccount">Account</a> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-secondary" id="user-profile" data-bhw="UserProfile" href="/myprofile" data-bhw-path="Header|UserProfile"> Profile </a> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-secondary" id="user-subscriptions" data-bhw="UserSubscriptions" href="/subscription_center" data-bhw-path="Header|UserSubscriptions">Subscriptions</a> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-secondary" id="user-giftcard" data-bhw="UserGiftcard" href="/giftcards" data-bhw-path="Header|UserGiftcard">Redeem Gift Card</a> 
+          <a role="menuitem" class="my-stuff-item my-stuff-item-secondary refer-a-friend" href="/visitor_referral" id="refer-a-friend" data-bhw="UserReferFriends" data-bhw-path="Header|UserReferFriends"> Refer Friends, Get $10* </a> 
+          <a role="menuitem" id="sign-out" data-bhw="UserSignOut" href="https://www.groupon.com/logout?metric=layout_login&amp;return_to=https%3A%2F%2Fwww.groupon.com%2F" class="my-stuff-item my-stuff-item-secondary sign-out referrer-link" data-href="https://www.groupon.com/logout" data-bhw-path="Header|UserSignOut">Sign Out</a> 
+         </div>
+        </div> 
+       </div> 
+       <div class="columns user-wrapper"> 
+        <div id="ls-user-nav">
+         <nav class="user-menu signed-in"> 
+          <span data-bhw="RecentlyViewedDeals" data-bhw-path="Header|RecentlyViewedDeals"><a href="/occasion/recently-viewed-deals" id="ls-rvd-link" class="icon-view user-menu-item"> Recently Viewed </a></span> 
+          <span data-bhw="Wishlist" data-bhw-path="Header|Wishlist">
+            <!-- 愿望单图标 -->
+            <a id="header-wishlist-heart" data-bhc="wishlist:myWishlists" href="" class="icon-heart-filled user-menu-item" rel="nofollow" data-bhc-path="Header|Wishlist|wishlist:myWishlists"> My Wishlist </a></span> 
+            <!-- 购物车图标 -->
+            <span id="ls-header-cart-link" class="user-menu-item cart-widget responsive-hide-500 cart-widget-shows" data-bhw="CartWidget" data-bhw-path="Header|CartWidget"><a href="/cart" id="ls-cart-link" class="cart-link icon-goods" rel="nofollow">
+            <span class="cart-text">Your Cart (2 items)</span> 
+            <span class="cart-count">2</span>
+           </a>
+           <!-- 购物车列表 空 -->
+           <div id="ls-header-cart-body" class="cart-flyout cart-empty-container" data-bhw="ShoppingCart" data-bhw-path="Header|CartWidget|ShoppingCart">
+             <div class="cart-empty-body">
+               <div class="cart-empty-header">Your Shopping Cart is Empty!</div>
+               <p class="cart-empty-content">Time to fill this bad boy with great products like regulated mods,starter kits,Tanks and Vaporizers, great offerings from Clickuu<a href="">Groupon Goods.</a>.</p>
+             </div>
+           </div>
+           <!-- 购物车列表 -->
+           <div class="cart-flyout cart-container" data-bhw="ShoppingCart" data-bhd="{&quot;uuid&quot;:&quot;fa4be1ff-7f7f-47ef-83f4-817088e739eb&quot;}" data-bhw-path="Header|CartWidget|ShoppingCart">
+            <div class="cart-header">
+             <div class="cart-cell cart-desc">
+              <span class="cart-desc-title">Your Cart</span>
+              <span class="cart-desc-qty">(2 items)</span>
+             </div>
+             <div class="cart-cell cart-quantity">
+              Qty
+             </div>
+             <div class="cart-cell cart-price">
+              Price
+             </div>
+            </div>
+            <div class="cart-item-list"> 
+             <div class="cart-item" data-uuid="f317924e-815f-4ef2-91b5-d9dda0ce685a" data-bhc="deal_option:gg-cm-boss-guardian-angel-extended-sleeve-synthetic-leather-ladies-garden+f317924e-815f-4ef2-91b5-d9dda0ce685a" data-bhd="{&quot;deal_uuid&quot;:&quot;3a5e2aa5-54e2-4e1f-ae04-80b8da28acf2&quot;, &quot;deal_permalink&quot;:&quot;gg-cm-boss-guardian-angel-extended-sleeve-synthetic-leather-ladies-garden&quot;, &quot;option_uuid&quot;:&quot;f317924e-815f-4ef2-91b5-d9dda0ce685a&quot;, &quot;option_quantity&quot;:&quot;2&quot;}" data-bhc-path="Header|CartWidget|ShoppingCart|deal_option:gg-cm-boss-guardian-angel-extended-sleeve-synthetic-leather-ladies-garden+f317924e-815f-4ef2-91b5-d9dda0ce685a">
+              <div class="cart-cell cart-desc">
+               <div class="cart-img">
+                <img src="//img.grouponcdn.com/deal/2TSDizxQhQ99XzUMKwCgsXjeE8jU/2T-1000x600/v1/t100x100.jpg" />
+               </div>
+               <div class="cart-title">
+                Boss Guardian Angel Long Sleeve Women's Garden Gloves Coral Small
+               </div>
+              </div>
+              <div class="cart-cell cart-quantity">
+               2
+              </div>
+              <div class="cart-cell cart-price">
+               $16.99
+              </div>
+             </div> 
+            </div>
+            <div class="cart-footer">
+             <div class="cart-subtotal">
+              <div class="subtotal-text">
+                Subtotal:
+               <b>$33.98</b>
+              </div>
+             </div>
+             <div class="cart-links">
+              <a href="/cart" class="btn-buy btn-small" data-bhw="ViewCart" data-bhw-path="Header|CartWidget|ShoppingCart|ViewCart"> View Cart </a>
+             </div>
+            </div>
+           </div>
+          </span> 
+          <a id="user-merchant" class="responsive-hide-500 user-menu-item user-merchant" href="/merchant/get-started?utm_medium=referral&amp;utm_campaign=groupon-header1&amp;utm_source=groupon" data-bhw="user-merchant-link" ((#nofollowsubnavlinks))="" rel="nofollow" ((="" nofollowsubnavlinks))="" data-bhw-path="Header|user-merchant-link"> Sell </a>
+          <a id="user-help" class="responsive-hide-500 user-menu-item user-help" href="/customer_support" data-bhw="user-help-link" data-bhw-path="Header|user-help-link">Help</a>
+         </nav>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <nav id="ls-channel-nav" class="ls-channel-nav" style=""> 
+     <div id="ls-primary-nav-row" class="row"> 
+      <ul id="primary-nav" class="primary-nav" role="menubar">
+        <!-- 导航下标显示 +class active -->
+       <li id="home-tab" class="primary-nav-tab active"> <a href=""> 首页 </a> </li> 
+       <li id="local-tab" class="primary-nav-tab"> <a href=""> 拼购 </a> </li> 
+       <li id="goods-tab" class="primary-nav-tab"> <a href=""> 特卖 </a> </li> 
+       <li id="getaways-tab" class="primary-nav-tab"> <a href=""> 最新流行 </a> </li> 
+       <li id="goods-deal-of-day-tab" class="primary-nav-tab"> <a href=""> 测评达人 </a> </li> 
+       <li id="coupons-tab" class="primary-nav-tab"> <a href=""> 贸易环境 </a> </li> 
+       <li id="occasion-tab" class="primary-nav-tab"> <a href=""> 需求发布 </a> </li> 
+      </ul> 
+     </div> 
+    </nav> 
+   </header> 
+  </div>
+  <script>
+    var sign = document.querySelector('#ls-header-lower-signin-container')
+    var signflyout = document.querySelector('#ls-signin-flyout')
+    var signshow = false
+    sign.addEventListener('mouseenter', function() {
+      signshow = true
+      setTimeout(() => {
+        if(signshow)
+          signflyout.classList.add('show')
+      }, 300);
+    }, false)
+    sign.addEventListener('mouseleave', function() {
+      signshow = false
+      setTimeout(() => {
+        if(!signshow)
+          signflyout.classList.remove('show')
+      }, 300);
+    }, false)
+  </script>  
+ </body>
+</html>
