@@ -1,0 +1,166 @@
+.flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+.flex1 {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+.shadow{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	background: rgba(0, 0, 0, .5);
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 1rem;
+}
+.shadow.active{
+	display: flex;
+}
+.shadow .alertIcon{
+	width: 2.7rem;
+}
+.shadow .alertMid{
+	position: relative;
+	width: 5rem;
+	height: .23rem;
+}
+.shadow .alertMid img{
+	width: 100%;
+	height: 100%;
+}
+.shadow .alert_top, .shadow .alert_bottom{
+	background: #e84045;
+	width: 5rem;
+	color: #fff;
+}
+.shadow .alert_top{
+	border-top-left-radius: .3rem;
+	border-top-right-radius: .3rem;
+	font-size: .4rem;
+	padding: .3rem 0;
+	text-align: center;
+}
+.shadow .alertMid.dotted::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 90%;
+	margin-left: 5%;
+	height: 1px;
+	transform: translateY(-50%);
+	border-top: .05rem dotted #fff;
+}
+.shadow .alert_bottom{
+	border-bottom-left-radius: .3rem;
+	border-bottom-right-radius: .3rem;
+	min-height: 2rem;
+	font-size: .25rem;
+	padding: .25rem .5rem;
+	box-sizing: border-box;
+}
+.shadow .line{
+	position: relative;
+	width: .03rem;
+	height: .15rem;
+	background: #fff;
+}
+.shadow .close{
+	width: .6rem;
+	height: .6rem;
+}
+.shadow .confirm{
+	position: relative;
+	left: 50%;
+	top: 0px;
+	transform: translateX(-50%);
+	width: 2.4rem;
+	height: .6rem;
+	background: url('../images/bt_confirm.png') center center no-repeat;
+	background-size: 100% 100%;
+	margin: .25rem 0;
+	display: none;
+}
+.shadow .confirm.active{
+	display: block;
+}
+.scroll{
+	display: none;
+	position: absolute;
+	width: 5rem;
+	height: 7.5rem;
+	padding: 0 1rem;
+	margin: .25rem 0;
+	top: 2rem;
+	overflow-y: auto;
+	overflow-x: hidden;
+	color: #fff;
+}
+.scroll.active{
+	display: block;
+}
+.scroll h4{
+	font-size: .25rem;
+}
+.scroll h5{
+	line-height: 2;
+	font-size: .2rem;
+}
+.scroll p,.scroll span{
+	font-size: .16rem;
+}
+
+.scroll .title{
+	width: 100%;
+	height: .4rem;
+	line-height: .4rem;
+	text-align: center;
+	background: #6a4485;
+	border-radius: .4rem;
+	margin-top: .15rem;
+}
+
+.scroll .subTitle{
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px solid #f4aaac;
+}
+.scrollContent{
+	width: 5rem;
+	padding: 0 .25rem;
+	box-sizing: border-box;
+}
+.scrollbar{
+	display: none;
+	position: absolute;
+	top: 2.25rem;
+	right: .3rem;
+	height: 7.5rem;
+	width: 4px;
+	background: #e74145;
+}
+.scrollbar.active{
+	display: block;
+}
+
+.scrollbar i{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: .2rem;
+	height: 1.6rem;
+	background: #e74145;
+}

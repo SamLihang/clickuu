@@ -1,0 +1,406 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      background: #f5f5f5;
+    }
+    .clear::after {
+      content: '';
+      clear: both;
+      display: block;
+      height: 0;
+    }
+    .row {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1190px;
+    }
+    header {
+      height: 80px;
+      line-height: 80px;
+      background: #fff;
+    }
+    footer {
+      width: 100%;
+      height: 150px;
+      background: #fff;
+    }
+    header .head {
+      height: 100%;
+    }
+    header .logo {
+      width: 180px;
+      float: left;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    header .user {
+      float: right;
+    }
+    header .userImg {
+      position: relative;
+      top: 25px;
+      width: 30px;
+      margin-right: 15px;
+    }
+    .navigate {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      background: #544aa1;
+      height: 40px;
+      line-height: 40px;
+    }
+    .nav {
+      position: relative;
+      color: #fff;
+      font-size: 16px;
+      width: 100px;
+      float: left;
+      text-align: center;
+    }
+    .console {
+      float: right;
+      width: 140px;
+      height: 100%;
+      font-size: 16px;
+      color: #fff;
+      text-align: center;
+      background: #7561db;
+    }
+    article {
+      padding: 20px 0;
+    }
+    aside {
+      float: left;
+      width: 130px;
+      background: #3a3e4a;
+      padding-bottom: 10px;
+    }
+    .aside_title {
+      font-size: 13px;
+      color: #999999;
+      height: 40px;
+      line-height: 40px;
+    }
+    .aside_title img {
+      float: left;
+      height: 20px;
+      margin: 10px 5px;
+    }
+    .binggo ul li, .cepin ul li {
+      position: relative;
+      height: 30px;
+      line-height: 30px;
+      color: #d6d5d5;
+      font-size: 13px;
+      padding-left: 25px;
+    }
+    .binggo ul li.active, .cepin ul li.active {
+      background: #544aa1;
+      color: #ffffff;
+    }
+    .binggo ul li::after, .cepin ul li::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background: #494d58;
+    }
+    .content {
+      float: right;
+      width: 1040px;
+    }
+    .bred {
+      height: 30px;
+      line-height: 30px;
+      font-size: 13px;
+      color: #999999;
+      padding-left: 20px;
+      background: #ffffff;
+    }
+    .wrapper {
+      padding: 20px;
+      background: #fff;
+      margin-top: 20px;
+    }
+    .wrapper .title {
+      font-size: 16px;
+    }
+    .wrapper .wrapper_item {
+      margin-left: 80px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+      color: #666666;
+    }
+    .product .select {
+      display: inline-block;
+    }
+    .product p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #999999;
+    }
+    .product span {
+      font-size: 14px;
+      color: #333333;
+    }
+    .select {
+      position: relative;
+      width: 200px;
+      height: 30px;
+      text-indent: 10px;
+      border-radius: 3px;
+    }
+    .info p {
+      width: 90px;
+      float: left;
+      text-align: right;
+    }
+    .info input {
+      float: left;
+      width: 200px;
+      height: 30px;
+      margin-top: 10px;
+      text-indent: 10px;
+      border-radius: 3px;
+      border: 1px solid #cccccc;
+    }
+    .info input + input {
+      margin-left: 10px;
+    }
+    .info input:focus {
+      border-color: #f0832f;
+    }
+    .info span {
+      margin-left: 10px;
+    }
+    .err {
+      color: #f0832f;
+      position: relative;
+    }
+    .err img {
+      width: 15px;
+      margin: 0 10px 0 0;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .info button {
+      color: #666666;
+      float: left;
+      width: 50px;
+      height: 30px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      margin-top: 10px;
+      margin-left: -1px;
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      border-top: 1px #d9d9d9 dashed;
+      margin: 20px 0;
+    }
+    .addProp {
+      width: 90px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 3px;
+      margin-top: 10px;
+      margin-left: 170px;
+      border: 1px solid #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="row head">
+      <img class="logo" src="./img/logo.png" alt="">
+      <div class="user">
+        <img class="userImg" src="./img/user.png" alt="">
+        <span>您好， he</span>
+      </div>
+    </div>
+  </header>
+  <nav class="navigate">
+    <ul class="row">
+      <li class="nav"><a>首页</a></li>
+      <li class="nav"><a>宝贝管理</a></li>
+      <li class="nav"><a>账户</a></li>
+      <li class="nav"><a>我的新品</a></li>
+      <li class="nav"><a>我的测评</a></li>
+      <div class="console"><a>我的工作台</a></div>
+    </ul>
+  </nav>
+  <article class="row clear">
+    <aside>
+      <div class="binggo">
+        <div class="aside_title">
+          <img src="./img/binggo.png" alt="">
+          <h5>我的BINGGO</h5>
+        </div>
+        <div class="aside_content">
+          <ul>
+            <li>我要报名</li>
+            <li>报名记录</li>
+            <li>宝贝管理</li>
+            <li>新品管理</li>
+            <li>账户信息</li>
+            <li class="active">发布宝贝</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cepin">
+        <div class="aside_title">
+          <img src="./img/binggo.png" alt="">
+          <h5>测评人</h5>
+        </div>
+        <div class="aside_content">
+          <ul>
+            <li>测评人管理</li>
+            <li>我的测评人</li>
+            <li>宝贝管理</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <div class="content">
+      <div class="bred">
+        <p>首页<span> > </span>发布宝贝</p>
+      </div>
+      <div class="product wrapper">
+        <h4 class="title">选择产品类目</h4>
+        <div class="wrapper_item">
+          <span>宝贝类型：</span>
+          <select class="select" name="type1" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <select class="select" name="type1" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <select class="select" name="type1" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <select class="select" name="type1" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <p>您当前选择的是：<span>消费电子 > 电子烟 > 盒子烟 > 盒子烟配件</span></p>
+        <p>以下表单请用英文填写</p>
+      </div>
+      <div class="info wrapper">
+        <h4 class="title">基本信息</h4>
+        <div class="wrapper_item">
+          <p>宝贝短名称：</p>
+          <input type="text">
+          <span class="err"><img src="./img/close.png">产品名称不能为空</span>
+        </div>
+        <div class="wrapper_item">
+          <p>宝贝长名称：</p>
+          <input type="text">
+          <span>请输入宝贝长短名称</span>
+        </div>
+        <div class="wrapper_item">
+          <p>宝贝原价：</p>
+          <input type="text">
+          <button>USD</button>
+        </div>
+        <div class="wrapper_item">
+          <p>团购价格：</p>
+          <input type="text">
+          <button>USD</button>
+        </div>
+        <div class="wrapper_item">
+          <p>折扣：</p>
+          <input type="text">
+          <span>请输入折扣</span>
+        </div>
+        <div class="wrapper_item">
+          <p>运费：</p>
+          <span>无</span>
+        </div>
+        <div class="wrapper_item">
+          <p>团购数量：</p>
+          <input type="text">
+          <span>请输入团购数量</span>
+        </div>
+        <div class="wrapper_item">
+          <p>支付方式：</p>
+          <span>PAYPAL</span>
+        </div>
+        <div class="line"></div>
+        <div class="wrapper_item">
+          <p>品牌：</p>
+          <input type="text">
+          <span>请输入品牌名称</span>
+        </div>
+        <div class="wrapper_item">
+          <p>型号：</p>
+          <input type="text">
+          <span>请输入型号</span>
+        </div>
+        <div class="wrapper_item">
+          <p>原产地：</p>
+          <input type="text">
+          <span>请输入原产地</span>
+        </div>
+        <div class="wrapper_item">
+          <p>产品尺寸：</p>
+          <input type="text">
+          <span>请输入产品尺寸</span>
+        </div>
+        <div class="wrapper_item">
+          <p>包装尺寸：</p>
+          <input type="text">
+          <span>请输入包装尺寸</span>
+        </div>
+        <div class="wrapper_item">
+          <p>重量：</p>
+          <input type="text">
+          <span>请输入重量</span>
+        </div>
+        <div class="wrapper_item">
+          <p>自定义属性：</p>
+          <input type="text">
+          <input type="text">
+        </div>
+        <div class="wrapper_item">
+          <p>自定义属性：</p>
+          <input type="text">
+          <input type="text">
+        </div>
+        <div class="addProp">点击添加</div>
+      </div>
+      <div class="detail wrapper">
+        <h4 class="title">产品详细信息</h4>
+      </div>
+      <div class="logistics wrapper">
+        <h4 class="title">物流信息</h4>
+      </div>
+    </div>
+  </article>
+  <footer>
+
+  </footer>
+</body>
+</html>
