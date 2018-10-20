@@ -30,6 +30,13 @@
       width: 100%;
       height: 150px;
       background: #fff;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      line-height: 30px;
+    }
+    footer p:first-child {
+      line-height: 75px;
     }
     header .head {
       height: 100%;
@@ -162,12 +169,12 @@
       text-indent: 10px;
       border-radius: 3px;
     }
-    .info p {
-      width: 90px;
+    .info p, .detail p, .logistics p {
+      width: 100px;
       float: left;
       text-align: right;
     }
-    .info input {
+    .info input, .detail input, .logistics input {
       float: left;
       width: 200px;
       height: 30px;
@@ -179,10 +186,10 @@
     .info input + input {
       margin-left: 10px;
     }
-    .info input:focus {
+    .info input:focus, .detail input:focus, .logistics input:focus {
       border-color: #f0832f;
     }
-    .info span {
+    .info span, .detail span, .logistics span {
       margin-left: 10px;
     }
     .err {
@@ -206,6 +213,15 @@
       margin-top: 10px;
       margin-left: -1px;
     }
+    .info sub, .logistics sub {
+      margin-left: 170px;
+      font-size: 12px;
+      color: #b2b2b2;
+    }
+    .detail sub {
+      font-size: 12px;
+      color: #b2b2b2;
+    }
     .line {
       width: 100%;
       height: 1px;
@@ -222,7 +238,116 @@
       margin-left: 170px;
       border: 1px solid #cccccc;
     }
+    .detail label {
+      width: 65px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;  
+      display: inline-block;  
+      text-align: center;  
+      margin-top: 10px;
+    }
+    .detail label input {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+    .wrapper_content{
+      float: left;
+    }
+    sub {
+      line-height: 1.5;
+    }
+    .detail_imgs {
+    }
+    .detail_imgs img{
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 10px 10px 0 0 ;
+    }
+    .detail_imgs img.main::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 35px;
+      height: 35px;
+      background: url('./img/main.png');
+    }
+    .wrapper .wrapper_item.productImg, .wrapper .wrapper_item.textarea {
+      height: auto;
+    }
+    textarea {
+      margin-top: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .logistics .select {
+      width: 125px;
+    }
+    #measure{
+      margin-left: 10px;
+    }
+    .addMsg {
+      display: block;
+      color: #0088cc !important;
+      font-size: 14px !important;
+    }
+    sub span {
+      color: #f0832f;
+    }
+    .error.wrapper {
+      background: #fae7e7;
+    }
+    .error img {
+      float: left;
+      margin-right: 10px;
+    }
+    .errorMsg {
+      font-size: 12px;
+      float: left;
+    }
+    .errorMsg .edit {
+      color: #0088cc;
+    }
+    .content_footer {
+      margin-top: 20px;
+      text-align: center; 
+    }
+    .content_footer .title span{
+      color: #ff3e3e;
+    }
+    .content_footer .title input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .content_footer sub {
+      font-size: 14px;
+      color: #999999;
+    }
+    .content_footer .btns button {
+      width: 80px;
+      height: 40px;
+      box-sizing: border-box;
+      border-radius: 3px;
+      margin-top: 20px;
+    }
+    .content_footer .btns button:first-child {
+      background: #f0832f;
+      color: #fff;
+      margin-right: 20px;
+    }    
+    .content_footer .btns button:last-child{
+      border: 1px solid #ccc;
+    }
+    #container {
+      margin-top: 30px;
+    }
   </style>
+  <script type="text/javascript" src="./js/ueditor.config.js"></script>
+  <script type="text/javascript" src="./js/ueditor.all.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/lang/zh-cn/zh-cn.js"></script>
 </head>
 <body>
   <header>
@@ -389,18 +514,102 @@
           <input type="text">
           <input type="text">
         </div>
+        <sub>属性名和属性值必须同时填写，例：Color ： Red</sub>
         <div class="addProp">点击添加</div>
       </div>
-      <div class="detail wrapper">
+      <div class="detail clear wrapper">
         <h4 class="title">产品详细信息</h4>
+        <div class="wrapper_item clear productImg">
+          <p>产品图片：</p>
+          <div class="wrapper_content">
+            <label for="file">
+              浏览
+              <input type="file" id="file">
+            </label>
+            <sub><br/>单张不超过5M,支持jpeg，jpg，png格式;<br/>建议图片大于640*640，主题鲜明、图片清晰、提升买家满意度；</sub>
+            <div class="detail_imgs">
+              <img src="" alt="" class="main">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="wrapper_item">
+          <p>产品详情描述：</p>
+          <div class="wrapper_content" style="margin-top:15px">
+            <sub>为了获得最佳的视觉效果，我们建议保持图片尺寸为750px（宽）*800px（高），表格的尺寸宽度为750px。<br/>（请注意，宽度超出750px 的部分将无法展示。）</sub>
+            <script id="container" name="content" type="text/plain" style="width:800px;height:500px;">
+            </script>
+          </div>
+        </div>
       </div>
       <div class="logistics wrapper">
         <h4 class="title">物流信息</h4>
+        <div class="wrapper_item">
+          <p>发货时间：</p>
+          <input type="text">
+          <span>请输入发货时间</span>
+        </div>
+        <div class="wrapper_item">
+          <p>团购数量：</p>
+          <input type="text">
+          <span>请输入团购数量</span>
+        </div>
+        <div class="wrapper_item">
+          <p>供货能力：</p>
+          <input type="text">
+          <select name="measure" id="measure" class="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          per
+          <select name="time" id="" class="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <sub>请同时填写数值和单位</sub>
+        <sub class="addMsg">添加补充信息</sub>
+        <div class="wrapper_item clear textarea">
+          <p>常规包装：</p>
+          <div class="wrapper_content">
+            <textarea name="" id="" cols="100" rows="10"></textarea>
+          </div>
+        </div>
+        <sub>剩余：<span>512</span>字符；建议填写包装形式、尺寸、个类集装箱能装载的产品件数等信息，便于买家了解。</sub>
+      </div>
+      <div class="error wrapper clear">
+        <img src="./img/error.png" alt="">
+        <div class="errorMsg">
+          <p>您的信息填写有误，请根据提示修改后重新提交</p>
+          <p class="edit">马上修改</p>
+        </div>
+      </div>
+      <div class="content_footer">
+        <p class="title">
+          <span>*</span>
+          <input type="checkbox">
+          提交前，请再次检查并确认提交的信息真实、合法和有效。
+        </p>
+        <sub>信息发布上网或被退回后，您方可对此产品信息进行编辑。</sub>
+        <div class="btns">
+          <button>提交</button>
+          <button>保存</button>
+        </div>
       </div>
     </div>
   </article>
   <footer>
-
+    <p>克里尤尤  | www.clickuu.com | 全球贸易出口</p>
+    <p>禁限售规则-知识产权保护-隐私权政策-使用条款</p>
+    <p>©2018 克里尤尤网络技术有限公司.版权所有.</p>
   </footer>
+  <script type="text/javascript">
+    var ue = UE.getEditor('container');
+  </script>
 </body>
 </html>
