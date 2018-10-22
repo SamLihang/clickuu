@@ -348,6 +348,7 @@
   <script type="text/javascript" src="./js/ueditor.config.js"></script>
   <script type="text/javascript" src="./js/ueditor.all.js"></script>
   <script type="text/javascript" charset="utf-8" src="./js/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <header>
@@ -435,86 +436,89 @@
       </div>
       <div class="info wrapper">
         <h4 class="title">基本信息</h4>
-        <div class="wrapper_item">
-          <p>宝贝短名称：</p>
-          <input type="text">
-          <span class="err"><img src="./img/close.png">产品名称不能为空</span>
+        <div class="wrapper_list">
+
+          <div class="wrapper_item">
+            <p>宝贝短名称：</p>
+            <input type="text">
+            <span class="err"><img src="./img/close.png">产品名称不能为空</span>
+          </div>
+          <div class="wrapper_item">
+            <p>宝贝长名称：</p>
+            <input type="text">
+            <span>请输入宝贝长短名称</span>
+          </div>
+          <div class="wrapper_item">
+            <p>宝贝原价：</p>
+            <input type="text">
+            <button>USD</button>
+          </div>
+          <div class="wrapper_item">
+            <p>团购价格：</p>
+            <input type="text">
+            <button>USD</button>
+          </div>
+          <div class="wrapper_item">
+            <p>折扣：</p>
+            <input type="text">
+            <span>请输入折扣</span>
+          </div>
+          <div class="wrapper_item">
+            <p>运费：</p>
+            <span>无</span>
+          </div>
+          <div class="wrapper_item">
+            <p>团购数量：</p>
+            <input type="text">
+            <span>请输入团购数量</span>
+          </div>
+          <div class="wrapper_item">
+            <p>支付方式：</p>
+            <span>PAYPAL</span>
+          </div>
+          <div class="line"></div>
+          <div class="wrapper_item">
+            <p>品牌：</p>
+            <input type="text">
+            <span>请输入品牌名称</span>
+          </div>
+          <div class="wrapper_item">
+            <p>型号：</p>
+            <input type="text">
+            <span>请输入型号</span>
+          </div>
+          <div class="wrapper_item">
+            <p>原产地：</p>
+            <input type="text">
+            <span>请输入原产地</span>
+          </div>
+          <div class="wrapper_item">
+            <p>产品尺寸：</p>
+            <input type="text">
+            <span>请输入产品尺寸</span>
+          </div>
+          <div class="wrapper_item">
+            <p>包装尺寸：</p>
+            <input type="text">
+            <span>请输入包装尺寸</span>
+          </div>
+          <div class="wrapper_item">
+            <p>重量：</p>
+            <input type="text">
+            <span>请输入重量</span>
+          </div>
+          <div class="wrapper_item">
+            <p>自定义属性：</p>
+            <input type="text">
+            <input type="text">
+          </div>
+          <div class="wrapper_item">
+            <p>自定义属性：</p>
+            <input type="text">
+            <input type="text">
+          </div>
         </div>
-        <div class="wrapper_item">
-          <p>宝贝长名称：</p>
-          <input type="text">
-          <span>请输入宝贝长短名称</span>
-        </div>
-        <div class="wrapper_item">
-          <p>宝贝原价：</p>
-          <input type="text">
-          <button>USD</button>
-        </div>
-        <div class="wrapper_item">
-          <p>团购价格：</p>
-          <input type="text">
-          <button>USD</button>
-        </div>
-        <div class="wrapper_item">
-          <p>折扣：</p>
-          <input type="text">
-          <span>请输入折扣</span>
-        </div>
-        <div class="wrapper_item">
-          <p>运费：</p>
-          <span>无</span>
-        </div>
-        <div class="wrapper_item">
-          <p>团购数量：</p>
-          <input type="text">
-          <span>请输入团购数量</span>
-        </div>
-        <div class="wrapper_item">
-          <p>支付方式：</p>
-          <span>PAYPAL</span>
-        </div>
-        <div class="line"></div>
-        <div class="wrapper_item">
-          <p>品牌：</p>
-          <input type="text">
-          <span>请输入品牌名称</span>
-        </div>
-        <div class="wrapper_item">
-          <p>型号：</p>
-          <input type="text">
-          <span>请输入型号</span>
-        </div>
-        <div class="wrapper_item">
-          <p>原产地：</p>
-          <input type="text">
-          <span>请输入原产地</span>
-        </div>
-        <div class="wrapper_item">
-          <p>产品尺寸：</p>
-          <input type="text">
-          <span>请输入产品尺寸</span>
-        </div>
-        <div class="wrapper_item">
-          <p>包装尺寸：</p>
-          <input type="text">
-          <span>请输入包装尺寸</span>
-        </div>
-        <div class="wrapper_item">
-          <p>重量：</p>
-          <input type="text">
-          <span>请输入重量</span>
-        </div>
-        <div class="wrapper_item">
-          <p>自定义属性：</p>
-          <input type="text">
-          <input type="text">
-        </div>
-        <div class="wrapper_item">
-          <p>自定义属性：</p>
-          <input type="text">
-          <input type="text">
-        </div>
-        <sub>属性名和属性值必须同时填写，例：Color ： Red</sub>
+          <sub>属性名和属性值必须同时填写，例：Color ： Red</sub>
         <div class="addProp">点击添加</div>
       </div>
       <div class="detail clear wrapper">
@@ -610,6 +614,20 @@
   </footer>
   <script type="text/javascript">
     var ue = UE.getEditor('container');
+  </script>
+  <script>
+    function addInfo() {
+      $('.wrapper_list').append(` 
+        <div class="wrapper_item">
+          <p>自定义属性：</p>
+          <input type="text">
+          <input type="text">
+        </div>`)
+    }
+
+    $('.addProp').click(function(e) {
+      addInfo()
+    })
   </script>
 </body>
 </html>
