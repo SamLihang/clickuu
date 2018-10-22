@@ -157,7 +157,11 @@
   border-color: #a0a2ad;
   text-decoration: none;
 }
+.editAddress, .deleteAddress {
+  border: none;
+}
 </style>
+<script src="./js/jquery-3.3.1.min.js"></script>
  </head> 
  <body class="body-wrapper" data-spm="8443308">
   <!-- tangram:2580 begin--> 
@@ -1528,53 +1532,13 @@ header.ui-header.ui-header-biz-ma-v5,
               </div>
              </div>
             </div>
-            <div class="item-content-wrap notification">
-             <div class="item-content item-content-left">
-              <p class="item-base-info"><i class="next-icon next-icon-prompt next-icon-small"></i><span style="margin-left: 5px; line-height: 21px; padding-right: 10px;">Notification</span><span>2017-10-09 08:19</span></p>
-              <div class="util-clearfix">
-               <div id="J-entry-box-wrap" data-widget-cid="widget-0">
-                <div class="J-satisfaction-survey-box scc-buyer-satisfaction-survey-box"> 
-                 <div class="J-box-title b-statis-survey-title">
-                  Rate your supplier's reply (ANONYMOUS):
-                 </div> 
-                 <div class="J-b-s-s-experience-box b-s-s-experience-box util-clearfix"> 
-                  <div class="J-btn-exp-item b-s-s-experience-item" data-val="1"> 
-                   <div class="b-ex-item-icon p-icon-very-bad"></div> 
-                   <div class="b-ex-item-text">
-                    Very bad
-                   </div> 
-                  </div> 
-                  <div class="J-btn-exp-item b-s-s-experience-item" data-val="2"> 
-                   <div class="b-ex-item-icon p-icon-bad"></div> 
-                   <div class="b-ex-item-text">
-                    Bad
-                   </div> 
-                  </div> 
-                  <div class="J-btn-exp-item b-s-s-experience-item" data-val="3"> 
-                   <div class="b-ex-item-icon p-icon-okay"></div> 
-                   <div class="b-ex-item-text">
-                    Neutral
-                   </div> 
-                  </div> 
-                  <div class="J-btn-exp-item b-s-s-experience-item" data-val="4"> 
-                   <div class="b-ex-item-icon p-icon-good"></div> 
-                   <div class="b-ex-item-text">
-                    Good
-                   </div> 
-                  </div> 
-                  <div class="J-btn-exp-item b-s-s-experience-item" data-val="5"> 
-                   <div class="b-ex-item-icon p-icon-great"></div> 
-                   <div class="b-ex-item-text">
-                    Great
-                   </div> 
-                  </div> 
-                 </div> 
-                 <div class="b-statis-survey-questions"></div> 
-                </div>
-               </div>
-              </div>
-             </div>
-            </div>
+            <div class="item-content-wrap">
+              <div class="item-content item-content-right">
+                <p class="item-base-info"><span class="name">Wade Xu</span><span>2018-10-18 17:09</span></p>
+                <div class="user-content"><img src="https://img.alicdn.com/tfs/TB1bs7ZQXXXXXXGapXXXXXXXXXX-88-88.png" alt="user-avatar" class="session-avatar">
+                  <div class="content" style="margin: 0">
+                    <div class="session-rich-content"><p>1212</p></div>
+                  </div><div></div><p class="read-status">Read</p></div></div></div>
            </div>
           </div>
           <form class="reply-wrapper">
@@ -2294,22 +2258,15 @@ header.ui-header.ui-header-biz-ma-v5,
                   <div class="next-form-item next-row" id="taShippingAddress_1" label="[object Object]" required="">
                    <label for="taShippingAddress_1" required="" class="next-col-8 next-form-item-label"><span data-i18n-appname="" data-i18n-ns="trade-contract.ta.order.com.shippingaddress.form-item" data-i18n-key="label">Shipping address</span></label>
                    <div class="next-col-16 next-form-item-control">
-                    <div class="bc-icbu-shipping-address-container">
-                     <span class="address-render-line"><span class="text-render-address"></span></span>
-                     <span><button data-spm-click="gostr=/sc.1;locaid=d_shipping_address;type=addnew" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium" style="margin-left: 4px; margin-right: 4px;"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_add">Add an address</span></button>
-                      <div id="shippingAddressList">
-                       <!-- react-empty: 1045 -->
-                       <div>
-                        <!-- react-empty: 1047 -->
-                       </div>
-                      </div></span>
-                    </div>
-                    <!-- react-text: 1048 --> 
-                    <!-- /react-text -->
-                    <div class=""></div>
-                    <!-- react-text: 1050 --> 
-                    <!-- /react-text -->
-                   </div>
+                     <div class="bc-icbu-shipping-address-container">
+                       <span class="address-render-line">
+                         <span class="text-render-address">1212,(+1),121212121212<br>1219 3rd Ave,1212,Manhattan,New York,10021,United States of America</span>
+                         </span>
+                        <span>
+                          <button id="changeaddress" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium button-change-address" data-spm-anchor-id="a2700.8443308.0.d_shipping_address"><!-- react-text: 1299 -->&nbsp;&nbsp;<!-- /react-text --><!-- react-text: 1300 -->Change<!-- /react-text --><!-- react-text: 1301 -->&nbsp;&nbsp;<!-- /react-text --></button>
+                          <button id="addaddress" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium" data-spm-anchor-id="a2700.8443308.0.d_shipping_address" style="margin-left: 4px; margin-right: 4px;"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_add" data-spm-anchor-id="a2700.8443308.0.i3.7d313e5fywQrFA">Add an address</span></button>
+                          <div id="shippingAddressList"><!-- react-empty: 1048 --><div><!-- react-empty: 1050 --></div></div></span></div><!-- react-text: 1051 --> <!-- /react-text -->
+                          <div class=""></div><!-- react-text: 1053 --> <!-- /react-text --></div>
                   </div>
                   <div class="next-form-item next-row shipping-method-container shipping-method-container-xs contract-form undefined-taShippingMethod" id="taShippingMethod_1" required="" label="[object Object]">
                    <label for="taShippingMethod_1" required="" class="next-col-8 next-form-item-label"><span data-i18n-appname="" data-i18n-ns="trade-contract.ta.order.com.shipping_info.shipping_method" data-i18n-key="label">Shipping Method:</span></label>
@@ -2496,5 +2453,325 @@ header.ui-header.ui-header-biz-ma-v5,
    <img src=""/> 
   </div> 
   <input type="hidden" name="umidToken" value="Ba4e9567b6f745163906f5862b8664c60" /> 
+  <div id="addAddress" style="display: none">
+   <div data-reactroot="" class="next-overlay-wrapper next-dialog-wrapper opened">
+    <div class="next-overlay-backdrop"></div>
+    <div aria-hidden="false" class="next-dialog left next-overlay-inner" role="dialog" aria-labelledby="dialog-header-6" style="width: 650px; height: auto; left: 50%; top: 50%; transform: translate(-50%, -50%)">
+     <div id="dialog-header-6" class="next-dialog-header">
+      <span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.dialog_title">Shipping Address</span>
+     </div>
+     <div id="dialog-body-7" class="next-dialog-body" style="max-height: none;" data-spm-anchor-id="a2700.8443308.0.i10.7d313e5fywQrFA">
+      <form class="next-form next-form-left ver next-form-medium">
+       <div class="next-form-item next-row" label="[object Object]" required="">
+        <label for="contactPerson" required="" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.contact.label">Contact name</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <span class="next-input next-input-single next-input-medium"><input type="text" placeholder="Contact person or contact company" data-meta="Field" id="contactPerson" value="" height="100%" /></span>
+         <!-- react-text: 14 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 16 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row" label="[object Object]" required="">
+        <label required="" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.address.label">Address 1</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <div class="next-form-item next-row formItemWapperExtra">
+          <label for="address" class=" next-form-item-label"></label>
+          <div class="next-col-24 next-form-item-control">
+           <span class="next-input next-input-single next-input-medium"><input type="text" autocomplete="off" placeholder="Street address, P.O. box, company name, c/o" data-meta="Field" id="address" value="" height="100%" /></span>
+           <!-- react-text: 26 --> 
+           <!-- /react-text -->
+           <div class=""></div>
+           <!-- react-text: 28 --> 
+           <!-- /react-text -->
+          </div>
+         </div>
+         <!-- react-text: 29 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 31 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row" label="[object Object]">
+        <label for="address2" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.address2.label">Address 2</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <span class="next-input next-input-single next-input-medium"><input type="text" placeholder="Apartment ,suite ,unit , building , floor ,etc." data-meta="Field" id="address2" value="" height="100%" /></span>
+         <!-- react-text: 38 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 40 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row" label="[object Object]" required="">
+        <label for="country" required="" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.country.label">Country / Region</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <span data-meta="Field" id="country" class="next-select medium has-clear" tabindex="0" value="" style="width: 100%;"><input type="hidden" name="select-faker" value="" /><span class="next-select-inner">
+           <!-- react-text: 121 -->
+           <!-- /react-text --><i class="next-icon next-icon-delete-filling next-icon-small next-select-clear"></i></span><i class="next-icon next-icon-arrow-down next-icon-small next-select-arrow"></i></span>
+         <!-- react-text: 50 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 52 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row" label="[object Object]">
+        <label for="province" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.province.label">State / Province</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <span class="next-input next-input-single next-input-medium"><input type="text" placeholder="Please enter state / province" data-meta="Field" id="province" value="" height="100%" /></span>
+         <!-- react-text: 59 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 61 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row" label="[object Object]">
+        <label for="city" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.city.label">City</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <span class="next-input next-input-single next-input-medium"><input type="text" placeholder="City" data-meta="Field" id="city" value="" height="100%" /></span>
+         <!-- react-text: 68 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 70 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row" label="[object Object]">
+        <label for="zip" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.zip.label">Zip /postal code</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <span class="next-input next-input-single next-input-medium"><input type="text" placeholder="Zip Code" data-meta="Field" id="zip" value="" height="100%" /></span>
+         <!-- react-text: 77 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 79 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+       <div class="next-form-item next-row has-success" label="[object Object]" required="">
+        <label required="" class="next-col-6 next-form-item-label"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressForm.mobile.label">Mobile phone</span></label>
+        <div class="next-col-16 next-form-item-control">
+         <div class="next-row">
+          <div class="next-col next-col-8">
+           <span class="next-input next-input-single next-input-medium" style="width: 100%;"><input type="text" placeholder="Country Code" data-meta="Field" id="phoneCode" value="" height="100%" /></span>
+          </div>
+          <div class="next-col next-col-16">
+           <span class="next-input next-input-single next-input-medium" style="width: 100%;"><input type="text" placeholder="Phone No." data-meta="Field" id="mobileNo" value="" height="100%" /></span>
+          </div>
+         </div>
+         <!-- react-text: 91 --> 
+         <!-- /react-text -->
+         <div class=""></div>
+         <!-- react-text: 93 --> 
+         <!-- /react-text -->
+        </div>
+       </div>
+      </form>
+     </div>
+     <div id="dialog-footer-8" class="next-dialog-footer">
+      <span><button type="button" id="submitAddress" class="next-btn next-btn-primary next-btn-medium">
+        <!-- react-text: 116 -->Submit
+        <!-- /react-text --></button><button type="button" id="cancelAddress" class="next-btn next-btn-normal next-btn-medium">
+        <!-- react-text: 118 -->Cancel
+        <!-- /react-text --></button></span>
+     </div>
+     <a href="javascript:;" class="next-dialog-close" id="closeAddAddress"><i class="next-icon next-icon-close next-icon-small"></i></a>
+    </div>
+   </div>
+  </div>
+  <div id="changeAddress" style="display: none">
+   <div data-reactroot="" class="next-overlay-wrapper next-dialog-wrapper opened">
+    <div class="next-overlay-backdrop"></div>
+    <div aria-hidden="false" class="next-dialog left next-overlay-inner" role="dialog" aria-labelledby="dialog-header-15" style="width: 650px; height: auto; left: 346px; top: 272.5px;">
+    <div id="dialog-header-15" class="next-dialog-header">
+      <span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.select_shipping_address">Select shipping address</span>
+    </div>
+    <div id="dialog-body-16" class="next-dialog-body" style="max-height: none;">
+      <div>
+      <div class="next-radio-group">
+        <div class="next-table only-bottom-border no-header address-list">
+        <div class="next-table-inner">
+          <div class="next-table-body">
+          <table>
+            <colgroup>
+            <col style="width: 50px;" />
+            <col />
+            <col style="width: 130px;" />
+            </colgroup>
+            <tbody>
+            <tr class="next-table-row first">
+              <td class="next-table-cell first">
+              <div class="next-table-cell-wrapper">
+                <label class=""><span class="next-radio checked "><span class="next-radio-inner press"></span><input type="radio" value="120344600004" aria-checked="true" /></span></label>
+              </div></td>
+              <td class="shipping-address-cell next-table-cell">
+              <div class="next-table-cell-wrapper">
+                <div class="shipping-address-line">
+                <span class="shipping-address-content">
+                  <!-- react-text: 29 -->1212,(+1),121212121212
+                  <!-- /react-text -->
+                  <!-- react-text: 30 -->,
+                  <!-- /react-text --></span>
+                <!-- react-text: 31 -->
+                <!-- /react-text -->
+                <!-- react-text: 32 -->&nbsp;&nbsp;
+                <!-- /react-text -->
+                <!-- react-text: 33 -->
+                <!-- /react-text -->
+                <br />
+                <span class="shipping-address-content">1219 3rd Ave,1212,Manhattan,New York,10021,United States of America</span>
+                <button data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=default" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-setdefault">
+                  <!-- react-text: 37 -->Set Default
+                  <!-- /react-text --></button>
+                </div>
+              </div></td>
+              <td class="biz-address-list-operate next-table-cell last">
+              <div class="next-table-cell-wrapper">
+                <div class="address-list-operate-section">
+                  <button class="editAddress" data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=edit" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-item"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_edit">Edit</span></button>
+                  <button class="deleteAddress" data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=delete" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-item"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_delete">Delete</span></button>
+                </div>
+              </div></td>
+            </tr>
+            <tr class="next-table-row">
+              <td class="next-table-cell first">
+              <div class="next-table-cell-wrapper">
+                <label class=""><span class="next-radio "><span class="next-radio-inner unpress"></span><input type="radio" value="120344598525" aria-checked="false" /></span></label>
+              </div></td>
+              <td class="shipping-address-cell next-table-cell">
+              <div class="next-table-cell-wrapper">
+                <div class="shipping-address-line">
+                <span class="shipping-address-content">
+                  <!-- react-text: 56 -->1212,(+1),121212121212
+                  <!-- /react-text -->
+                  <!-- react-text: 57 -->,
+                  <!-- /react-text --></span>
+                <!-- react-text: 58 -->
+                <!-- /react-text -->
+                <!-- react-text: 59 -->&nbsp;&nbsp;
+                <!-- /react-text -->
+                <!-- react-text: 60 -->
+                <!-- /react-text -->
+                <br />
+                <span class="shipping-address-content">1219 3rd Ave,1212,922878893946000000,New York,10021,United States of America</span>
+                <button data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=default" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-setdefault">
+                  <!-- react-text: 64 -->Set Default
+                  <!-- /react-text --></button>
+                </div>
+              </div></td>
+              <td class="biz-address-list-operate next-table-cell last">
+              <div class="next-table-cell-wrapper">
+                <div class="address-list-operate-section">
+                  <button class="editAddress" data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=edit" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-item"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_edit">Edit</span></button>
+                  <button class="deleteAddress" data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=delete" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-item"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_delete">Delete</span></button>
+                </div>
+              </div></td>
+            </tr>
+            <tr class="next-table-row last">
+              <td class="next-table-cell first">
+              <div class="next-table-cell-wrapper">
+                <label class=""><span class="next-radio "><span class="next-radio-inner unpress"></span><input type="radio" value="120344596979" aria-checked="false" /></span></label>
+              </div></td>
+              <td class="shipping-address-cell next-table-cell">
+              <div class="next-table-cell-wrapper">
+                <div class="shipping-address-line">
+                <span class="shipping-address-content">
+                  <!-- react-text: 83 -->1212,(+1),121212121212
+                  <!-- /react-text -->
+                  <!-- react-text: 84 -->,
+                  <!-- /react-text --></span>
+                <!-- react-text: 85 -->
+                <!-- /react-text -->
+                <!-- react-text: 86 -->&nbsp;&nbsp;
+                <!-- /react-text -->
+                <!-- react-text: 87 -->
+                <!-- /react-text -->
+                <br />
+                <span class="shipping-address-content">1219 3rd Ave,1212,922878893946000000,New York,10021,United States of America</span>
+                <button data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=default" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-setdefault">
+                  <!-- react-text: 91 -->Set Default
+                  <!-- /react-text --></button>
+                </div>
+              </div></td>
+              <td class="biz-address-list-operate next-table-cell last">
+              <div class="next-table-cell-wrapper">
+                <div class="address-list-operate-section">
+                <button class="editAddress" data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=edit" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-item"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_edit">Edit</span></button>
+                <button class="deleteAddress" data-spm-click="gostr=/sc.1;locaid=d_shipping_address_list;type=delete" type="button" class="next-btn next-btn-text next-btn-primary next-btn-medium text-operate-item"><span data-i18n-appname="trade-biz" data-i18n-key="bc_icbu_shipping_address.shippingAddressCommon.btn_delete">Delete</span></button>
+                </div>
+              </div></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="dialog-footer-17" class="next-dialog-footer">
+      <span><button type="button" class="next-btn next-btn-primary next-btn-medium" id="shipaddress">
+        <!-- react-text: 102 -->Ship to this address
+        <!-- /react-text --></button><button id="cancelchange" type="button" class="next-btn next-btn-normal next-btn-medium">
+        <!-- react-text: 104 -->Cancel
+        <!-- /react-text --></button></span>
+    </div>
+    <a href="javascript:;" id="closeChangeAddress" class="next-dialog-close"><i class="next-icon next-icon-close next-icon-small"></i></a>
+    </div>
+  </div>
+  </div>
  </body>
+ <script>
+   //新增地址
+   function hideAddAddress() {
+    $('#addAddress').hide()
+   }
+   $('#addaddress').click(function() {
+     $('#addAddress').show()
+   })
+   //删除地址
+   $('#closeAddAddress').click(function() {
+    hideAddAddress()
+   })
+   //提交新增地址
+   $('#submitAddress').click(function() {
+    hideAddAddress()
+   })
+   //取消新增地址
+   $('#cancelAddress').click(function() {
+    hideAddAddress()
+   })
+   //改变地址
+   function hideChangeAddress() {
+    $('#changeAddress').hide()
+   }
+   $('#changeaddress').click(function() {
+     $('#changeAddress').show()
+   })
+   $('#shipaddress').click(function() {
+     hideChangeAddress()
+   })
+   $('#cancelchange').click(function() {
+      hideChangeAddress()
+   })
+   $('#closeChangeAddress').click(function() {
+      hideChangeAddress()
+   })
+   //修改地址
+   $('.editAddress').click(function() {
+    hideChangeAddress()
+    $('#addAddress').show()
+   })
+   //删除地址
+   $('.deleteAddress').click(function(e) {
+      e.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
+   })
+   //product details 删除
+   $('.component-product—item-action').click(function(e) {
+     e.target.parentElement.parentElement.parentElement.remove()
+   })
+ </script>
 </html>
