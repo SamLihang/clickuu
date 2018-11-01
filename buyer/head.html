@@ -56,6 +56,24 @@
       top: 0;
       height: 100%;
     }
+    .seller-enter-menu {
+      display: none;
+      position: absolute;
+      z-index: 999;
+      color: #333;
+      background: #fff;
+      width: 155px;
+    }
+    .seller-enter-menu-item p {
+      margin: 10px 5px;
+    }
+    .seller-enter-menu-item {
+      float: left;
+    }
+    .seller-enter:hover+.seller-enter-menu, .seller-enter-menu:hover {
+      display: block
+    }
+
   </style>
  </head> 
  <body> 
@@ -207,6 +225,16 @@
        <div class="columns user-wrapper"> 
         <div id="ls-user-nav">
          <nav class="user-menu signed-in"> 
+          <span data-bhw="RecentlyViewedDeals" data-bhw-path="Header|RecentlyViewedDeals" style="position: relative">
+            <a href="javascript: void()" id="ls-rvd-link" class="icon-arrow-down user-menu-item seller-enter"> 卖家入口 </a>
+             <div class="cart-flyout seller-enter-menu" data-bhw="ShoppingCart" data-bhw-path="Header|CartWidget|ShoppingCart">
+              <div class="seller-enter-menu-item"><a><p>卖家频道</p></a></div>
+              <div class="seller-enter-menu-item"><a><p>入驻须知</p></a></div>
+              <div class="seller-enter-menu-item"><a><p>卖家后台</p></a></div>
+              <div class="seller-enter-menu-item"><a><p>卖家大学</p></a></div>
+              <div class="seller-enter-menu-item"><a><p>关注我们</p></a></div>
+            </div>
+          </span> 
           <span data-bhw="RecentlyViewedDeals" data-bhw-path="Header|RecentlyViewedDeals"><a href="/occasion/recently-viewed-deals" id="ls-rvd-link" class="icon-view user-menu-item"> Recently Viewed </a></span> 
           <span data-bhw="Wishlist" data-bhw-path="Header|Wishlist">
             <!-- 愿望单图标 -->
