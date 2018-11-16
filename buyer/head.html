@@ -320,23 +320,23 @@
    </header> 
   </div>
   <script>
-    var sign = document.querySelector('#ls-header-lower-signin-container')
-    var signflyout = document.querySelector('#ls-signin-flyout')
-    var signshow = false
-    sign.addEventListener('mouseenter', function() {
-      signshow = true
-      setTimeout(() => {
-        if(signshow)
-          signflyout.classList.add('show')
+    "use strict";
+
+    var sign = document.querySelector('#ls-header-lower-signin-container');
+    var signflyout = document.querySelector('#ls-signin-flyout');
+    var signshow = false;
+    sign.addEventListener('mouseenter', function () {
+      signshow = true;
+      setTimeout(function () {
+        if (signshow) signflyout.classList.add('show');
       }, 300);
-    }, false)
-    sign.addEventListener('mouseleave', function() {
-      signshow = false
-      setTimeout(() => {
-        if(!signshow)
-          signflyout.classList.remove('show')
+    }, false);
+    sign.addEventListener('mouseleave', function () {
+      signshow = false;
+      setTimeout(function () {
+        if (!signshow) signflyout.classList.remove('show');
       }, 300);
-    }, false)
+    }, false);
   </script>  
  </body>
 </html>
