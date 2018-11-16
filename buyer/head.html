@@ -14,16 +14,15 @@
       content: "";
       position: absolute;
       pointer-events: none;
-      border: 8px solid transparent;
-      border-bottom-color: var(--color-white);
-      background: var(--color-prim);
+      background:#fff;
       margin: 0;
       left: 50%;
       bottom: 0;
       transform: translateX(-50%);
-      height: 3px;
+      height: 45px;
       width: 100%;
-      border: 0;
+      border-bottom:1px solid #ff731c;
+      color: #333;
     }
     .cart-img{
       width: 82px;
@@ -73,7 +72,36 @@
     .seller-enter:hover+.seller-enter-menu, .seller-enter-menu:hover {
       display: block
     }
+  .header{
+    background:#20436d;
+  }
+  .ls-channel-nav{
+    background:#20436d; 
+  }
+  .primary-nav-tab{
+    padding: 0 20px;
+  }
+  .primary-nav a{
+    color: #fff;
+  }
+  .primary-nav a:hover{
+    color: #fff;
+  }
+  .primary-nav a.active{
+    color: #333;
+  }
+  .ls-groupon-logo{
+    width: 260px;
+    height: 30px;
+  }
+  .ls-groupon-logo span img{
+    width: 100%;
+    height: 100%;
 
+  }
+  .big-searchbar #ls-header-main{
+    margin: 0 7px 22px 260px;
+  }
   </style>
  </head> 
  <body> 
@@ -81,7 +109,7 @@
    <header data-bhw="Header" role="banner" class="header big-searchbar" id="ls-header" data-bhw-path="Header"> 
     <div class="ls-header-top" style=""> 
      <div class="row ls-header-top-row ls-header-with-signin-flyout" id="ls-header-top-row"> 
-      <a href="/" id="ls-groupon-logo" class="ls-groupon-logo" data-bhw="Logo" title="Groupon" data-bhw-path="Header|Logo"> <span>CLICKUU</span> 
+      <a href="/" id="ls-groupon-logo" class="ls-groupon-logo" data-bhw="Logo" title="Groupon" data-bhw-path="Header|Logo"> <span><img src="image/logo.png"></span> 
       </a> 
       <div id="ls-header-main" class="ls-clearfix alternative-search"> 
        <div id="ls-search-bar-wrapper" class="columns search-bar-wrapper ls-inbox-enabled"> 
@@ -307,36 +335,35 @@
      <div id="ls-primary-nav-row" class="row"> 
       <ul id="primary-nav" class="primary-nav" role="menubar">
         <!-- 导航下标显示 +class active -->
-       <li id="home-tab" class="primary-nav-tab active"> <a href=""> 首页 </a> </li> 
-       <li id="local-tab" class="primary-nav-tab"> <a href=""> 拼购 </a> </li> 
+       <li id="home-tab" class="primary-nav-tab active"> <a href="" class="active"> Home </a> </li> 
+       <li id="local-tab" class="primary-nav-tab"> <a href=""> Binggo</a> </li> 
        <li id="goods-tab" class="primary-nav-tab"> <a href=""> 特卖 </a> </li> 
-       <li id="getaways-tab" class="primary-nav-tab"> <a href=""> 最新流行 </a> </li> 
-       <li id="goods-deal-of-day-tab" class="primary-nav-tab"> <a href=""> 测评达人 </a> </li> 
-       <li id="coupons-tab" class="primary-nav-tab"> <a href=""> 贸易环境 </a> </li> 
+       <li id="getaways-tab" class="primary-nav-tab"> <a href=""> New Product Release </a> </li> 
+       <li id="goods-deal-of-day-tab" class="primary-nav-tab"> <a href=""> Top Reviewer </a> </li> 
+       <li id="coupons-tab" class="primary-nav-tab"> <a href=""> Trade Assurance</a> </li> 
        <li id="occasion-tab" class="primary-nav-tab"> <a href=""> 需求发布 </a> </li> 
-      </ul> 
-     </div> 
-    </nav> 
-   </header> 
+      </ul>
+     </div>
+    </nav>
+   </header>
   </div>
   <script>
-    var sign = document.querySelector('#ls-header-lower-signin-container')
-    var signflyout = document.querySelector('#ls-signin-flyout')
-    var signshow = false
-    sign.addEventListener('mouseenter', function() {
-      signshow = true
-      setTimeout(() => {
-        if(signshow)
-          signflyout.classList.add('show')
+    "use strict";
+    var sign = document.querySelector('#ls-header-lower-signin-container');
+    var signflyout = document.querySelector('#ls-signin-flyout');
+    var signshow = false;
+    sign.addEventListener('mouseenter', function () {
+      signshow = true;
+      setTimeout(function () {
+        if (signshow) signflyout.classList.add('show');
       }, 300);
-    }, false)
-    sign.addEventListener('mouseleave', function() {
-      signshow = false
-      setTimeout(() => {
-        if(!signshow)
-          signflyout.classList.remove('show')
+    }, false);
+    sign.addEventListener('mouseleave', function () {
+      signshow = false;
+      setTimeout(function () {
+        if (!signshow) signflyout.classList.remove('show');
       }, 300);
-    }, false)
+    }, false);
   </script>  
  </body>
 </html>
