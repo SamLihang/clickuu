@@ -124,6 +124,17 @@
   .my-stuff-item.my-stuff-item-primary:hover .user-icon {
     display: none;
   }
+  #ls-header-signin-flyout-container:hover #ls-signin-flyout {
+    display: block
+  }
+  #ls-header-signin-flyout-container:hover::after {
+    content: "";
+    width: 23%;
+    height: 10px;
+    bottom: -5px;
+    right: 0px;
+    position: absolute;
+  }
   </style>
  </head> 
  <body> 
@@ -372,23 +383,5 @@
     </nav>
    </header>
   </div>
-  <script>
-    "use strict";
-    var sign = document.querySelector('#ls-header-lower-signin-container');
-    var signflyout = document.querySelector('#ls-signin-flyout');
-    var signshow = false;
-    sign.addEventListener('mouseenter', function () {
-      signshow = true;
-      setTimeout(function () {
-        if (signshow) signflyout.classList.add('show');
-      }, 300);
-    }, false);
-    sign.addEventListener('mouseleave', function () {
-      signshow = false;
-      setTimeout(function () {
-        if (!signshow) signflyout.classList.remove('show');
-      }, 300);
-    }, false);
-  </script>  
  </body>
 </html>
